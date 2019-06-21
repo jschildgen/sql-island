@@ -16,13 +16,13 @@ m|m
 Baecker|padeiro
 friedlich|amigável
 Ernst Peng|Ernesto Perada
-Waffenschmied|armeiro de metal
+Waffenschmied|armamento-ferreiro
 Rita Ochse|Rita Ox
 w|f
 Carl Ochse|Carl Ox
 Kaufmann|mercador
 Dirty Dieter|Dieter Sujo
-Schmied|metal
+Schmied|ferreiro
 boese|maldoso
 Gerd Schlachter|Guerry Abatedor
 Metzger|açougueiro
@@ -43,10 +43,10 @@ Helga Rasenkopf|Helen Cabeça de Grama
 Irene Hutmacher|Ivy Chapeleiro
 Erich Rasenkopf|Edward Cabeça de Grama
 Rudolf Gaul|Ryan Cavalo
-Hufschmied|ferreiro de metal
+Hufschmied|equipamento-ferreiro
 Anna Flysh|Ann Carninha
 gegenstand|item
-besitzer|proprietario
+besitzer|proprietário
 Teekanne|bule
 Spazierstock|bengala
 Hammer|martelo
@@ -65,10 +65,10 @@ Wow, hier ist einiges los!|Nossa, quantas pessoas!
 Mensch, was bin ich hungrig. Ich suche mir erst einmal einen Metzger, bei dem ich eine Scheibe Wurst schnorren kann.|Cara! Estou com muita fome. Vou procurar um açougueiro e pedir algumas salsichas grátis.
 Hier, lass es dir schmecken! Und pass bei deiner Reise gut auf, dass du dich von bösen Bewohnern fern hälst, solange du unbewaffnet bist. Denn nicht jeder hier ist friedlich!|Aqui está! Aproveite a refeição! Mas tome cuidado! Enquanto estiver desarmado, fique longe dos vilões. Nem todo mundo nessa ilha é amigável.
 Danke Erich! Nagut, dann muss ich mal schauen, welche Bewohner friedlich sind.|Obrigado, Edward! Tá bom, vamos ver quem é amigável nesta ilha...
-Früher oder später brauche ich aber ein Schwert. Lasst uns einen friedlichen Waffenschmied suchen, der mir ein Schwert schmieden kann. (Hinweis: Bedingungen im WHERE-Teil kannst du mit AND verknüpfen)|Não tem jeito de conseguir uma espada por conta própria. Vou tentar encontrar alguém amigável com perícia em forjar uma espada de aço para mim. (Dica: Você pode combinar predicados na cláusula WHERE usando o AND.)
-Hm, das sind sehr wenige. Vielleicht gibt es noch andere friedliche Schmiede, z.B. Hufschmied, Schmied, Waffenschmied, etc. Probiere beruf LIKE '%schmied', um alle Bewohner zu finden, deren Beruf mit 'schmied' endet (% ist ein Platzhalter für beliebig viele Zeichen).|"Isso não parece nada bom. Talvez outro aldeão amigável com perícia em aço possa ajudá-lo, por exemplo um armeiro com aço. Tente: use LIKE ""%aço"" para encontrar os habitantes cujo trabalho termine com ""aço"" (% é um coringa para qualquer número de caracteres). "
-schmied|forjadores de metal
-Das sieht schon besser aus! Diese Schmiede kommen alle in Frage. Ich gehe sie dann mal nacheinander besuchen.|Assim parece melhor! Vou visitar esses forjadores.
+Früher oder später brauche ich aber ein Schwert. Lasst uns einen friedlichen Waffenschmied suchen, der mir ein Schwert schmieden kann. (Hinweis: Bedingungen im WHERE-Teil kannst du mit AND verknüpfen)|"Não tem jeito de conseguir uma espada por conta própria. Vou tentar encontrar algum ferreiro amigável para forjar uma espada para mim (""armamento-ferreiro""). (Dica: Você pode combinar predicados na cláusula WHERE usando o AND.)"
+Hm, das sind sehr wenige. Vielleicht gibt es noch andere friedliche Schmiede, z.B. Hufschmied, Schmied, Waffenschmied, etc. Probiere beruf LIKE '%schmied', um alle Bewohner zu finden, deren Beruf mit 'schmied' endet (% ist ein Platzhalter für beliebig viele Zeichen).|"Isso não parece nada bom. Talvez outro aldeão amigável com perícia em ferraria possa ajudá-lo, por exemplo qualquer ferreiro. Tente: use LIKE ""%ferreiro"" para encontrar os habitantes cujo trabalho termine com ""ferreiro"" (% é um coringa para qualquer número de caracteres). "
+schmied|ferreiro
+Das sieht schon besser aus! Diese Schmiede kommen alle in Frage. Ich gehe sie dann mal nacheinander besuchen.|Assim parece melhor! Vou visitar esses ferreiros.
 Hallo Fremder, wohin des Wegs? Ich bin Paul, der Bürgermeister von Affenstadt. Ich trage dich gerne als Bewohner meines Dorfes ein.|Olá estranho! Aonde está indo? Eu sou Paul, o prefeito da Cidade Macaco. Irei registrá-lo como cidadão.
 Fremder|Estranho
 Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.|Não precisa me chamar de estranho! Qual é meu idpessoa? (Dica: Em consultas formais, o * significa todas as colunas. Ao invés de utilizá-lo, você pode endereçar uma ou mais colunas, separadas por vírgula, e você obterá somente as colunas que precisar!)
