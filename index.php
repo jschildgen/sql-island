@@ -91,7 +91,7 @@ if(isset($_SESSION['currentExercise'])) {
             <div class="offset-by-one animated bounceIn" id="bubble">
                 <div class="text-box clearfix" style="width:250px">
                     <!--<h2>Wow!</h2>-->
-                    <h3 id="exercise_text"><? if($game->getExercise() != null) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
+                    <h3 id="exercise_text"><?php if($game->getExercise() != null) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
                     <!--<p>Zeige mir die Liste der Bewohner.</p>-->
                     <a id="continue_button" class="large red button radius right"><?=Lang::txt('Weiter');?></a>
                     <span class="text-box-pointer clearfix"></span>
@@ -128,9 +128,9 @@ if(isset($_SESSION['currentExercise'])) {
 
     <div class="row" id="tablelist">
         <div class="columns twelve button save-button radius">
-					<div class="columns"><? echo Lang::txt('DORF').' ('.Lang::txt('dorfnr').', '.Lang::txt('name').', '.Lang::txt('haeuptling').')'; ?></div>
-					<div class="columns"><? echo Lang::txt('BEWOHNER').' ('.Lang::txt('bewohnernr').', '.Lang::txt('name').', '.Lang::txt('dorfnr').', '.Lang::txt('geschlecht').', '.Lang::txt('beruf').', '.Lang::txt('gold').', '.Lang::txt('status').')'; ?></div>
-					<div class="columns"><? echo Lang::txt('GEGENSTAND').' ('.Lang::txt('gegenstand').', '.Lang::txt('besitzer').')'; ?></div>
+					<div class="columns"><?php echo Lang::txt('DORF').' ('.Lang::txt('dorfnr').', '.Lang::txt('name').', '.Lang::txt('haeuptling').')'; ?></div>
+					<div class="columns"><?php echo Lang::txt('BEWOHNER').' ('.Lang::txt('bewohnernr').', '.Lang::txt('name').', '.Lang::txt('dorfnr').', '.Lang::txt('geschlecht').', '.Lang::txt('beruf').', '.Lang::txt('gold').', '.Lang::txt('status').')'; ?></div>
+					<div class="columns"><?php echo Lang::txt('GEGENSTAND').' ('.Lang::txt('gegenstand').', '.Lang::txt('besitzer').')'; ?></div>
 				</div>
     </div>
 
