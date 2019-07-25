@@ -7,7 +7,7 @@ Gurkendorf|Cidade Pepino
 Zwiebelhausen|Cidade Cebola
 bewohner|habitante
 bewohnernr|idpessoa
-geschlecht|genero
+geschlecht|gênero
 beruf|trabalho
 gold|ouro
 status|status
@@ -83,7 +83,7 @@ Finde friedliche Bewohner mit dem Beruf Haendler oder Kaufmann. Eventuell möcht
 Ich interessiere mich für den Ring und die Teekanne. Der Rest ist alles Schrott. Gib mir bitte die beiden Gegenstände. Meine Bewohnernummer ist übrigens 15.|Eu gostaria da xícara e do balde. O resto não é nada além de sucata. Por favor me dê esses dois itens. Meu idpessoa é 15.
 Dankeschön!|Obrigada!
 Hier hast du einen Haufen Gold!|Aqui, um pouco de ouro!
-Leider reicht das noch nicht für ein Schwert. Dann muss ich wohl doch arbeiten. Bevor ich mich jedoch irgendwo bewerbe, sollte ich vielleicht meinen Namen von Fremder auf meinen richtigen Namen ändern, ansonsten wird mich niemand einstellen.|Infelizmente, não é ouro suficiente para comprar uma espada. Parece que terei que trabalhar mesmo. Talvez não seja uma má ideia trocar meu nome de Estranho para meu nome real antes de me candidatar à um trabalho.
+Leider reicht das noch nicht für ein Schwert. Dann muss ich wohl doch arbeiten. Bevor ich mich jedoch irgendwo bewerbe, sollte ich vielleicht meinen Namen von Fremder auf meinen richtigen Namen ändern, ansonsten wird mich niemand einstellen.|Infelizmente, não é ouro suficiente para comprar uma espada. Parece que terei que trabalhar mesmo. Talvez não seja uma má ideia trocar meu nome de Estranho para meu nome real antes de me candidatar à um trabalho. 
 In meiner Freizeit backe ich gerne. Ich glaube, ich verdiene mir ein bisschen Geld als Bäcker. Zeige mir alle Bäcker. Tipp: Mit ORDER BY gold kannst du die Liste sortieren, mit ORDER BY gold DESC steht sogar der reichste Bäcker oben.|Já que cozinhar é um de meus passatempos, por que não encontrar um padeiro para o qual eu possa trabalhar? (Dica: Liste todos os padeiros usando 'ORDER BY ouro' para ordenar os resultados. 'ORDER BY ouro DESC' é ainda melhor porque o padeiro mais rico ficará no topo.)
 Ach, der Paul! Den kenn ich doch!|Olha, o Paul! Eu conheço ele!
 Hi, da bist du ja wieder! Soso, %%%PLAYER_NAME%%% heißt du also. Und du willst als Bäcker arbeiten? Da sag ich nicht nein. Ich zahle dir pro hundert Brötchen, die du mir bäckst, 1 Gold.|Olá, você de novo! Então, %%%PLAYER_NAME%%% é seu nome. Vi que você quer trabalhar como padeiro? Tudo bem! Você receberá 1 de ouro para cada 100 pãezinhos.
@@ -100,7 +100,7 @@ Juhu! Ich hab's! Dann gehe ich mal Fritz besuchen, um ihn nach Dirty Dieter und 
 Hm, wie viele Einwohner hat eigentlich Zwiebelhausen?|Hm, quantos habitantes a Cidade Cebola tem?
 Hallo %%%PLAYER_NAME%%%, Dirty Dieter hält den Piloten im Haus seiner Schwester gefangen. Soll ich dir verraten, wie viele Frauen es in Zwiebelhausen gibt? Ach was, das kannst du schon selbst herausfinden! (Hinweis: Frauen erkennt man an geschlecht = 'w')|"Olá %%%PLAYER_NAME%%%, o piloto está mantido em cativeiro por Dieter Sujo na casa da irmã dele. Devo dizer quantas mulheres vivem em Cidade Cebola? Acho que não, descubra sozinho! (Dica: Mulher aparece como gênero = ""f"")"
 Ha, nur eine Frau. Mal schauen, wie sie heißt.|Só uma mulher? Qual seu nome?
-So! Dann gehe ich jetzt da hin!|Vamos lá!
+So! Dann gehe ich jetzt da hin!|Vamos lá! 
 %%%PLAYER_NAME%%%, gib mir alles Gold, was die Bewohner von unserem Nachbardorf Gurkendorf zusammen besitzen und ich lasse den Piloten frei! Du willst wissen, wie viel das ist? Ich zeige es dir!|%%%PLAYER_NAME%%%, se você me entregar todas as propriedades da aldeia vizinha Cidade Pepino, eu libertarei o piloto. Eu vou te mostrar agora do que essa propriedade consiste.
 So viel Gold werde ich niemals allein durch Brötchenbacken verdienen können. Ich muss mir etwas anderes einfallen lassen. Wenn ich Gegenstände verkaufe und zusätzlich noch als Bäcker arbeite, kann ich maximal so viel Gold bekommen, wie die Händler, Kaufmänner und Bäcker zusammen besitzen. Wie viel ist das?|Ah não, somente fazer pães não resolverá meu problema. Se eu continuar trabalhando e vendendo itens no entanto, eu poderia conseguir mais ouro do que o valor de ouro dos inventários de todos os padeiros, negociadores e mercadores juntos. Quanto de ouro é isso?
 Das ist viel zu wenig.|Isso não é suficiente!
@@ -120,14 +120,14 @@ Bist du dir sicher?|Você tem certeza?
 Wenn du das Spiel neustartest, fängst du wieder ganz von vorne an.|Quando você recomeçar o jogo, terá que começar tudo de novo!
 Ja, Neustart!|Sim, recomeçar!
 Nein, weiterspielen!|Não, continuar o jogo!
-SQL Island Game Trailer|Trailer do jogo SQL Island
+SQL Island Game Trailer|Trailer do jogo SQL Island 
 Das bist du!|Esse é você!
 Nach einem Flugzeugabsturz stellst du fest, dass du der einzige Überlebende bist. Du landest auf der Insel SQL Island und das Ziel des Spiels ist es, von dieser Insel zu entkommen.|Depois de sobreviver a queda do avião, você estará preso na Ilha SQL. Enquanto progride no jogo, você encontrará um jeito de escapar da ilha.
 Zurück|Voltar
 Hier wirst du nachher die Spielbefehle eingeben. Du steuerst das komplette Spiel mit Kommandos aus der Datenbanksprache SQL.|Esse campo é onde você escreve seus comandos. O jogo inteiro será comandado por meio de recursos da linguagem de banco de dados (SQL).
 Du kannst kein SQL? Keine Angst, hier werden dir im Laufe des Spiels die einzelnen Kommandos gezeigt.|Ainda não sabe nada sobre SQL? Sem problemas. Você descobrirá sobre eles aqui!
 Hier unten steht, welche Tabellen es gibt: Dorf, Bewohner und Gegenstand. In Klammern stehen die Spaltennamen der Tabellen. Diese Infos wirst du im Spiel ganz oft brauchen!|Aqui em baixo você encontrará todas as tabelas que poderá acessar: aldeia, habitante e item. Cada uma delas inclui várias colunas (em parênteses). Você precisará dessas informações durante todo o jogo.
-Los geht's!|Vamos lá!
+Los geht's!|Vamos lá! 
 Über diesen Menü-Knopf kannst du das Spiel neustarten oder dir diese Anleitung noch einmal anschauen. Aber genug geredet, lasst uns anfangen!|Caso queira reiniciar o jogo ou rever as instruções, apenas clique nesse botão de menu.
 Schreibe deine SQL-Anfrage hier hinein|Escreva seu comando SQL aqui
 Yeah|Isso
