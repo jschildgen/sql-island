@@ -39,6 +39,8 @@ if($query == "continue") {
 if($show_exercise) {
 	if($game->getExercise() == null) {
 		$result["exercise"] = Lang::txt("Das Spiel ist zu Ende.");
+		$result["exercise"] .= " ".Lang::txt("Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.");
+		$result["certificate"] = true;
 	} else {
 		$game->setPlayerName($db->getPlayerName());
 		$db->log("-- ".$game->getExercise()->getDescription());

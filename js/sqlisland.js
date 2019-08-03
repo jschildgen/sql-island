@@ -152,6 +152,9 @@ function query_callback(result, a, b, c) {
   if(res.exercise != undefined) {
      $('#exercise_text').text(res.exercise);
   }
+  if(res.certificate != undefined) {
+     $('#certificate_button').show();
+  }
 
   if(res.speaker != undefined) {
     if(res.speaker == "R") {
@@ -174,7 +177,7 @@ function query_callback(result, a, b, c) {
     $('#rightimg').css('background-image', '');
   }
 
-
+x=res
   if(res.solved != undefined) {
     $('#continue_button').show();
     $('#submit-query-button').addClass("disabled");
@@ -233,7 +236,10 @@ function ajaxdata(url, callback, arg1, arg2, arg3)
 }
 
 function umlaute(text) {
-	output = text;
-	output = output.replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/Ä/g,"Ae").replace(/Ö/g,"Oe").replace(/Ü/g,"Ue").replace(/ß/g,"ss");
-	return output;
+	//only replace part after where
+	if(text.toUpperCase().indexOf('WHERE') == -1) { return text; }
+	output1 = text.substr(0, text.toUpperCase().indexOf('WHERE'));
+	output2 = text.substr(text.toUpperCase().indexOf('WHERE'));
+	output2 = output2.replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/Ä/g,"Ae").replace(/Ö/g,"Oe").replace(/Ü/g,"Ue").replace(/ß/g,"ss");
+	return output1+output2;
 }

@@ -118,7 +118,7 @@ public function query($query, $readonly = FALSE, $exercise = null) {
 		$error = $this->db->errorInfo();
     if(strlen($error[2]) < 2) {
 
-		  if(!$exercise->getSolved() && $exercise->getSolution() != null && $exercise->getUpdates() == FALSE) {
+		  if($exercise != null && !$exercise->getSolved() && $exercise->getSolution() != null && $exercise->getUpdates() == FALSE) {
 		  	return DB::respondMsg(0, Lang::txt("Was machst du da eigentlich?"));
 		  }
 

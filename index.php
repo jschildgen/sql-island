@@ -94,7 +94,8 @@ if(isset($_SESSION['currentExercise'])) {
                     <!--<h2>Wow!</h2>-->
                     <h3 id="exercise_text"><?php if($game->getExercise() != null) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
                     <!--<p>Zeige mir die Liste der Bewohner.</p>-->
-                    <a id="continue_button" class="large red button radius right"><?=Lang::txt('Weiter');?></a>
+		    <a id="continue_button" class="large red button radius right"><?=Lang::txt('Weiter');?></a>
+		    <a id="certificate_button" class="large green button radius right" style="display:none" href="cert.php" target=_blank">Zertifikat</a>
                     <span class="text-box-pointer clearfix"></span>
                     <span class="text-box-pointer-shadow"></span>
                 </div>
@@ -150,7 +151,8 @@ if(isset($_SESSION['currentExercise'])) {
   <p class="lead"><?=Lang::txt('Bitte wähle eine Sprache.');?></p>
   <p><?=Lang::txt('Danach wird das Spiel neu gestartet');?></p>
   <p><a href="./?lang=de" class="button">Deutsch</a>
-	<a href="./?lang=en" class="button">English</a>
+     <a href="./?lang=en" class="button">English</a>
+     <a href="./?lang=pt" class="button">Português</a>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
