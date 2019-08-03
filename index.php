@@ -50,7 +50,8 @@ if(isset($_SESSION['currentExercise'])) {
     <script type="text/javascript"  src="./js/sqlisland.js"></script>
     <link rel="stylesheet" href="./css/highlight/agate.css">
     <link rel="stylesheet" href="./css/ladda.min.css">
-		<link rel="icon" href="./favicon.ico">    <script src="./js/highlight.pack.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">    
+    <script src="./js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
   </head>

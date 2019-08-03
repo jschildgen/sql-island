@@ -127,6 +127,55 @@ if($umsatzsteuer == 0) {
 $html .= nl2br($rechnungs_footer);
 
 
+$html = <<<HTML
+<html>
+<head>
+<style type="text/css">
+.ribbon {
+    max-width: 980px;
+    height:95px;
+    margin:0 auto;
+    background: url('./images/wf/ribbon-tile.png') repeat-x;
+}
+.ribbon .left {
+    float:left;
+    width:71px;
+    height:95px;
+    background: url('./images/wf/ribbon-left.png') no-repeat;
+}
+
+
+.ribbon .title {
+    float:left;
+    margin: 10px 0 0 10px;
+}
+
+.ribbon .logo {
+    float:right;
+    margin-right: 20px;
+}
+
+.ribbon .right {
+    float:right;
+    width:71px;
+    height:95px;
+    background: url('./images/wf/ribbon-right.png') no-repeat;
+}
+
+
+
+html, body {
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
+    z-index: 0;
+}
+</style>
+</head>
+<body>
+Was!
+</body></html>
+HTML;
+
+
 
 //////////////////////////// Erzeugung eures PDF Dokuments \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -134,18 +183,20 @@ $html .= nl2br($rechnungs_footer);
 require_once('tcpdf/tcpdf.php');
 
 // Erstellung des PDF Dokuments
-$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new TCPDF('L', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // Dokumenteninformationen
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor($pdfAuthor);
-$pdf->SetTitle('Rechnung '.$rechnungs_nummer);
-$pdf->SetSubject('Rechnung '.$rechnungs_nummer);
+$pdf->SetTitle('Certificate');
+$pdf->SetSubject('Certificate');
 
 
 // Header und Footer Informationen
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
 $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+$pdf->SetPrintHeader(false);
+$pdf->SetPrintFooter(false);
 
 // Auswahl des Font
 $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -173,10 +224,10 @@ $pdf->writeHTML($html, true, false, true, false, '');
 //Ausgabe der PDF
 
 //Variante 1: PDF direkt an den Benutzer senden:
-//$pdf->Output($pdfName, 'I');
+$pdf->Output($pdfName, 'I');
 
 //Variante 2: PDF im Verzeichnis abspeichern:
-$pdf->Output(dirname(__FILE__).'/'.$pdfName, 'F');
+//$pdf->Output(dirname(__FILE__).'/'.$pdfName, 'F');
 //echo 'PDF herunterladen: <a href="'.$pdfName.'">'.$pdfName.'</a>';
 
 ?>
