@@ -327,7 +327,7 @@ $this->db->exec("CREATE TABLE ".Lang::txt("dorf")." (".Lang::txt("dorfnr")." INT
         $this->db->exec("INSERT INTO ".Lang::txt("dorf")."(".Lang::txt("dorfnr").",".Lang::txt("name").",".Lang::txt("haeuptling").") VALUES (2, '".Lang::txt("Gurkendorf")."', 6)");
         $this->db->exec("INSERT INTO ".Lang::txt("dorf")."(".Lang::txt("dorfnr").",".Lang::txt("name").",".Lang::txt("haeuptling").") VALUES (3, '".Lang::txt("Zwiebelhausen")."', 13);");
 
-        $this->db->exec("CREATE TABLE ".Lang::txt("bewohner")." (".Lang::txt("bewohnernr")." INTEGER PRIMARY KEY AUTOINCREMENT, ".Lang::txt("name")." VARCHAR(31),".Lang::txt("dorfnr")." INT,".Lang::txt("geschlecht")." CHAR(1),".Lang::txt("beruf")." VARCHAR(31),".Lang::txt("gold")." INT,".Lang::txt("status")." VARCHAR(31));");
+        $this->db->exec("CREATE TABLE ".Lang::txt("bewohner")." (".Lang::txt("bewohnernr")." INTEGER PRIMARY KEY AUTOINCREMENT, ".Lang::txt("name")." VARCHAR(50),".Lang::txt("dorfnr")." INT,".Lang::txt("geschlecht")." CHAR(1),".Lang::txt("beruf")." VARCHAR(31),".Lang::txt("gold")." INT,".Lang::txt("status")." VARCHAR(31));");
 
 
 
