@@ -266,7 +266,7 @@ class Game {
 		$e[33]->speaker = "R";
 		$e[33]->speaker2 = "L";
 
-		$e = array($e[6], $e[16]);
+		//$e = array($e[6], $e[16]);
 
 		if($this->currentExercise >= count($e)) {
 			return null;
