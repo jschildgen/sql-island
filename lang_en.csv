@@ -152,3 +152,5 @@ Weitere Infos, Impressum, Kontakt und Publikationen|More information, contact an
 Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.|Oh, either you did too many or too few changes.
 Wofür brauchst du so eine lange Anfrage?|Why do you need such a long query?
 Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|Get your certificate of completion now! If you want to change the name on the certificate, use an UPDATE command on the inhabitants table.
+ausgewandert|emigrated
+Zertifikat|Certificate

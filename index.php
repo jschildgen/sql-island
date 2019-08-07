@@ -95,7 +95,7 @@ if(isset($_SESSION['currentExercise'])) {
                     <h3 id="exercise_text"><?php if($game->getExercise() != null) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
                     <!--<p>Zeige mir die Liste der Bewohner.</p>-->
 		    <a id="continue_button" class="large red button radius right"><?=Lang::txt('Weiter');?></a>
-		    <a id="certificate_button" class="large green button radius right" style="display:none" href="cert.php" target=_blank">Zertifikat</a>
+		    <a id="certificate_button" class="large green button radius right" style="display:none" href="cert.php" target=_blank"><?=Lang::txt('Zertifikat');?></a>
                     <span class="text-box-pointer clearfix"></span>
                     <span class="text-box-pointer-shadow"></span>
                 </div>

@@ -259,7 +259,7 @@ class Game {
 
 		$e[33] = new Exercise(Lang::txt("Vielen vielen Dank, %%%PLAYER_NAME%%%! Jetzt fliege ich dich nach Hause."));
 		$e[33]->description2 = Lang::txt("Juhu! Und als Andenken nehme ich mein Schwert, ein bisschen Gold und die nutzlosen Gegenstände mit nach Hause. Was für ein Abenteuer!");
-		$e[33]->setSolution("DELETE FROM ".Lang::txt("bewohner")." WHERE ".Lang::txt("bewohnernr")." = 20");
+		$e[33]->setSolution("UPDATE ".Lang::txt("bewohner")." SET ".Lang::txt("status")." = '".Lang::txt("ausgewandert")."' WHERE ".Lang::txt("bewohnernr")." = 20");
 		$e[33]->setSolved(true);
 		$e[33]->leftimg = "avatar_schwert_freuend";
 		$e[33]->rightimg = "arthur_frei";
