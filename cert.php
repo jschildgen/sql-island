@@ -46,7 +46,7 @@ $html = <<<HTML
 <h1 style="text-align:center; font-size:32pt">$playername</h1>
 <h1 style="text-align:center; font-size:22pt">has successfully completed the<br>learning game SQL Island.</h1>
 <h1 style="text-align:center; font-size:16pt">&nbsp;<br>ID: $cert_id</h1>
-<h1 style="text-align:center; font-size:16pt">URL: http://sql-island.de/certificate.php?id=$cert_id</h1>
+<h1 style="text-align:center; font-size:16pt">URL: http://sql-island.cs.uni-kl.de/cert.php?id=$cert_id</h1>
 <h1 style="text-align:right; font-size:10pt">&nbsp;<br>sql-island.de</h1>
 </body></html>
 HTML;
