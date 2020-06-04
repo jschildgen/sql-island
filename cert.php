@@ -35,6 +35,8 @@ if(isset($_GET['id'])) {
    $stmt->execute(array(":c" => $cert_id, ":g" => $_SESSION['dbID'], ":n" => $playername));
 }
 
+if(isset($_GET['check'])) { die("valid"); }
+
 $html = <<<HTML
 <html>
 <body style="font-family:Helvetica">
