@@ -92,7 +92,7 @@ public function query($query, $readonly = FALSE, $exercise = null) {
 		return DB::respondMsg(-1, Lang::txt("Es ist nicht erlaubt, mehrere Anfragen auf einmal auszuführen."));
 	}
 
-  if($query == "X") { return DB::respondMsg(1, 'Hey, Schummler!');  }
+  //if($query == "X") { return DB::respondMsg(1, 'Hey, Schummler!');  }
 
 	$begin = strtoupper(substr($q, 0, 7));
 	if($begin != "SELECT " && $begin != "INSERT " && $begin != "UPDATE " && $begin != "DELETE ") {
