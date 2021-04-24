@@ -1,5 +1,8 @@
 # sql-island
 
+## Preparation
+* ```chmod 777 DBs```
+
 ## Preparation of the Certificate Database
 * ```mkdir ../db```
 * ```chmod 777 ../db```
