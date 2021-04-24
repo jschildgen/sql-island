@@ -25,6 +25,8 @@ class Lang
 
 		if(self::$language == "pt") {
 			$lang_file = "lang_pt.csv";
+		} elseif(self::$language == "fr") {
+			$lang_file = "lang_fr.csv";
 		} else {
 			$lang_file = "lang_en.csv";
 		}
