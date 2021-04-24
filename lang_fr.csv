@@ -9,7 +9,7 @@ bewohner|habitant
 bewohnernr|personneid
 geschlecht|genre
 beruf|metier
-gold|dore
+gold|monnaie
 status|statut
 Paul Backmann|Paul Boulanger
 m|m
@@ -147,10 +147,10 @@ Danach wird das Spiel neu gestartet|Et ensuite le jeu va recommencer.
 Die Spalten sind falsch.|Les colonnes ne sont pas les bonnes.
 Info|Info
 Ein Text-Adventure-Lernspiel für die Datenbanksprache SQL|Un jeu sérieux d'aventures pour apprendre les rudiments du SQL, le langage des bases de données.
-Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische.|Le jeu a été développé par Johannes Schildgen de l'Université technique de Kaiserslautern dans le cadre d'un groupe de travail sur les systèmes d'information / systèmes d'information hétérogènes. Un grand merci à Isabell Ruth, qui a créé le graphisme et à Marlene van den Ecker pour la traduction en anglais.
+Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische, Adilson Vahldick für die portugiesische Übersetzung und Hervé L'helguen für die Übersetzung ins Französische.|Le jeu a été développé par Johannes Schildgen de l'Université technique de Kaiserslautern dans le cadre d'un groupe de travail sur les systèmes d'information / systèmes d'information hétérogènes. Un grand merci à Isabell Ruth, qui a créé le graphisme et à Marlene van den Ecker pour la traduction en anglais.
 Weitere Infos, Impressum, Kontakt und Publikationen|Informations complémentaires, mentions légales, contact et publications
 Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.|Oh oh ... Soit tu as fait trop de changements, soit pas assez.
 Wofür brauchst du so eine lange Anfrage?|Pourquoi as-tu fait une requête si longue ?
-Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|
-ausgewandert|
-Zertifikat|
+Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|Maintenant, récupérez votre certificat d'achèvement. Si vous voulez changer le nom sur le certificat, faites-le avec une commande UPDATE sur la table des résidents.
+ausgewandert|émigré
+Zertifikat|Certificat

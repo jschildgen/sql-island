@@ -166,7 +166,7 @@ if(isset($_SESSION['currentExercise'])) {
 <div id="info-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <h2 id="modalTitle">http://www.sql-island.de - SQL Island</h2>
   <p class="lead"><?=Lang::txt('Ein Text-Adventure-Lernspiel für die Datenbanksprache SQL');?></p>
-  <p><?=Lang::txt('Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische.');?></p>
+  <p><?=Lang::txt('Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische, Adilson Vahldick für die portugiesische Übersetzung und Hervé L\'helguen für die Übersetzung ins Französische.');?></p>
 	<p><a href="http://wwwlgis.informatik.uni-kl.de/cms/courses/informationssysteme/sqlisland/" class="button"><?=Lang::txt('Weitere Infos, Impressum, Kontakt und Publikationen'); ?></a></p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
