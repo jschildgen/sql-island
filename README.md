@@ -2,6 +2,7 @@
 
 ## Preparation
 * ```chmod 777 DBs```
+* ```chmod 777 DBs/save```
 * ```chmod 777 Logs```
 
 ## Preparation of the Certificate Database
