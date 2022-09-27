@@ -17,14 +17,20 @@ if(isset($_REQUEST['load_game_id'])
 	header("Location:.");*/
   $game_id = trim($_REQUEST['load_game_id']);
   $level = -1;
+  $dbfile = null;
   foreach (glob("DBs/save/".$game_id."_*.sqlite") as $filename) {
       preg_match('#DBs/save/([^_]*)_([0-9]+)_([^_]*)_([^_]*).sqlite#', $filename, $matches);
       if( ((int)$matches[2]) > $level) {  // if multiple files: the one with max level
         $level = (int)$matches[2];
         if($matches[3] != "") { $_SESSION['lang'] = $matches[3]; }
         if($matches[4] == "extreme") { $_SESSION['extreme'] = true; }
+        $dbfile = $filename;
       }
-      $_SESSION['currentExercise'] = $level;
+      if($dbfile != null) {
+        $_SESSION['dbID'] = $game_id;
+        $_SESSION['currentExercise'] = $level;
+        copy($dbfile, "DBs/".$game_id.".sqlite");
+      }
   }
   
 }
