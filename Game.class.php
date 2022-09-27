@@ -3,8 +3,12 @@ require_once("Exercise.class.php");
 require_once("Lang.class.php");
 
 class Game {
-	private $currentExercise;
+	private $currentExercise = 0;
 	private $player_name;
+
+	function __construct($currentExercise = 0) {
+		$this->Game($currentExercise);
+	}
 
 	public function Game($currentExercise = 0) { $this->currentExercise = $currentExercise; }
 

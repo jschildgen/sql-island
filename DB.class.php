@@ -13,6 +13,10 @@ private $db = null;
 
 public static $MODE_SIMULATE = "SIMULATION";
 
+function __construct($dbID = null) {
+	$this->DB($dbID);
+}
+
 public function DB($dbID = null) {
 	if($dbID == null) {
 		/* create new database instance */
@@ -20,6 +24,7 @@ public function DB($dbID = null) {
 		$randID = DB::generateRandomString();
 		$this->dbID = $randID;
 		$this->db = new PDO("sqlite:DBs/".$randID.".sqlite");
+		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 		$this->init_db();
 		//DB::generateTable($this->query("SELECT * FROM DORF"));
 	} elseif($dbID == DB::$MODE_SIMULATE) {
@@ -32,11 +37,13 @@ public function DB($dbID = null) {
 		$randID = DB::generateRandomString();
 	        $this->dbID = $randID;
         	$this->db = new PDO("sqlite:DBs/".$randID.".sqlite");
-                $this->init_db();
+					$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
+					$this->init_db();
 	} else {
 		/* use existing database instance */
 		$this->dbID = $dbID;
 		$this->db = new PDO("sqlite:DBs/".$dbID.".sqlite");
+		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 //		$this->init_db();
 	}
 
@@ -134,6 +141,7 @@ public function query($query, $readonly = FALSE, $exercise = null) {
 	}
 
 	$result = $this->db->query($q);
+
 	if($result) {
     $validationError = $this->isCorrect($exercise, $q);
 		if($validationError == "") {
@@ -240,6 +248,7 @@ public function isCorrect($exercise, $query) {
 }
 
 public function getPlayerName() {
+	if($this->db == null) { return null; }
 	$result = $this->db->query("SELECT ".Lang::txt("name")." AS name FROM ".Lang::txt("bewohner")." WHERE ".Lang::txt("bewohnernr")." = 20");
 	if($result == FALSE) { return null; }
 	foreach($result as $row) {

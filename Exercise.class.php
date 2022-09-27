@@ -16,6 +16,10 @@ class Exercise {
 	public $leftimg;
 	public $rightimg;
 
+	function __construct($description = "") {
+		$this->Exercise($description);
+	}
+
 	public function Exercise($description = "") { $this->description = $description; }
 
 	public function getDescription() {	return $this->description ;	}

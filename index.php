@@ -21,11 +21,12 @@ if(@$_GET['mode'] == "extreme") {
 
 if(isset($_SESSION['dbID'])) {
 	$db = new DB($_SESSION['dbID']);
-
 } else {
 	$db = new DB();
 	$_SESSION['dbID'] = $db->getDbID();
 }
+
+
 
 if(@$_SESSION['extreme'] === true) { require_once("./ExtremeGame.class.php"); } else { require_once("./Game.class.php"); }
 if(isset($_SESSION['currentExercise'])) {
@@ -217,7 +218,13 @@ if(isset($_SESSION['currentExercise'])) {
         editor.on("input", update);
         setTimeout(update, 100);
 
-
+        editor.commands.addCommand({
+            name: "submit",
+            bindKey: {win: "Ctrl-Return", mac: "Command-Return"},
+            exec: function(editor) {
+              $('#submit-query-button').click();
+            }
+        });
 
     </script>
 
