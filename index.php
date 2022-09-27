@@ -9,6 +9,26 @@ if(isset($_GET['lang'])) {
 	header("Location:.");
 }
 
+if(isset($_REQUEST['load_game_id']) 
+   && preg_match('/^[A-Za-z0-9]{10}$/', trim($_REQUEST['load_game_id'])) == 1) {
+	/*session_destroy();
+	session_start();
+	$_SESSION['lang'] = $_GET['lang'];
+	header("Location:.");*/
+  $game_id = trim($_REQUEST['load_game_id']);
+  $level = -1;
+  foreach (glob("DBs/save/".$game_id."_*.sqlite") as $filename) {
+      preg_match('#DBs/save/([^_]*)_([0-9]+)_([^_]*)_([^_]*).sqlite#', $filename, $matches);
+      if( ((int)$matches[2]) > $level) {  // if multiple files: the one with max level
+        $level = (int)$matches[2];
+        if($matches[3] != "") { $_SESSION['lang'] = $matches[3]; }
+        if($matches[4] == "extreme") { $_SESSION['extreme'] = true; }
+      }
+      $_SESSION['currentExercise'] = $level;
+  }
+  
+}
+
 require_once("./DB.class.php");
 require_once("Lang.class.php");
 
@@ -38,7 +58,7 @@ if(isset($_SESSION['currentExercise'])) {
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="<?=Lang::getLanguage();?>">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -75,6 +95,7 @@ if(isset($_SESSION['currentExercise'])) {
             <ul class="menu">
                 <li><a href="#" class="medium red button radius" id="joyride-button"><?=Lang::txt('Spielanleitung');?></a></li>
                 <li><a href="#" data-reveal-id="restart-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Spiel neustarten');?></a></li>
+                <li><a href="#" data-reveal-id="save-load-modal" class="medium red button radius" id="save-load-button"><?=Lang::txt('Spiel speichern / laden');?></a></li>
 								<li><a href="#" data-reveal-id="language-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Sprache wechseln');?></a></li>
 								<li><a href="#" data-reveal-id="videoModal" class="medium red button radius" id="restart-button"><?=Lang::txt('Game-Trailer Video anschauen');?></a></li>
 								<li><a href="#" data-reveal-id="info-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Info');?></a></li>
@@ -144,6 +165,20 @@ if(isset($_SESSION['currentExercise'])) {
   <p><?=Lang::txt('Wenn du das Spiel neustartest, fängst du wieder ganz von vorne an.');?></p>
   <p><a href="#" id="really-restart-button" class="button"><?=Lang::txt('Ja, Neustart!');?></a>
   <a href="#" id="not-restart-button" class="button"><?=Lang::txt('Nein, weiterspielen!');?></a></p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="save-load-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle"><?=Lang::txt('Spiel speichern / laden');?></h2>
+  <p><?=Lang::txt('Wenn du das Spiel speicherst, kannst du beim nächsten Mal hier weitermachen.');?></p>
+  <p><a href="#" id="save-button" class="button"><?=Lang::txt('Speichern');?></a></p>
+  <form method="POST" action="."><p><?=Lang::txt('Um ein Spiel zu laden, gib hier die Spiel-ID ein:');?> <input size="10" name="load_game_id"> <input type="submit" id="load-button" class="button" value="<?=Lang::txt('Laden');?>"></input></form></p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="save-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle"><?=Lang::txt('Gespeichert');?></h2>
+  <p class="lead"><?=Lang::txt('Notiere dir deine Spiel-ID: '); ?><span style="font-weight:bold;" id="game_id"></span></p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 

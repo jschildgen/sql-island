@@ -53,11 +53,12 @@ public static function deleteOldDBs() {
 	if ($handle = opendir('DBs')) {
 	    $deleteBefore = time() - 60*60*36; // 36 hours
 	    while (false !== ($file = readdir($handle))) {
-        	if ($file != "." && $file != "..") {
-		    $filemtime = filemtime('DBs/'.$file);
-		    if($filemtime < $deleteBefore) {
-		            unlink('DBs/'.$file);
-		    }
+        	//if ($file != "." && $file != "..") {
+				if(substr($file, -7) == ".sqlite") {
+						$filemtime = filemtime('DBs/'.$file);
+						if($filemtime < $deleteBefore) {
+										unlink('DBs/'.$file);
+						}
         	}
 	    }
 	    closedir($handle);
@@ -375,7 +376,7 @@ $this->db->exec("CREATE TABLE ".Lang::txt("dorf")." (".Lang::txt("dorfnr")." INT
 }
 
 private static function generateRandomString($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '123456789abcdefghkmnpqrstuvwxyzABCDEFGHKLMNPQRSTUVWXYZ';
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
         $randomString .= $characters[rand(0, strlen($characters) - 1)];

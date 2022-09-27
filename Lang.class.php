@@ -14,6 +14,10 @@ class Lang
 		self::$language = $l;
 	}
 
+	static public function getLanguage() {
+		return self::$language;
+	}
+
 	static public function txt($orig) {
 
 		if(self::$language == "de") {

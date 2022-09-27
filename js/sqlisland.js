@@ -62,7 +62,29 @@ jQuery(document).ready(function ($) {
     $('.menu-content').hide();
     $('.menu-bg').hide();
   });
+
+$('#save-button').click(function(e){
+  ajaxdata("save.php", function(result, a, b, c) { 
+    $('#game_id').text(result);
+    $('#save-modal').foundation('reveal', 'open');
+    $('.menu-content').hide();
+    $('.menu-bg').hide();
+    
+  }, null, null, null);
 });
+
+$('#load-button').click(function(e){
+  var game_id = $('#load_game_id')[0].value.trim();
+  if(game_id.length != 10) {
+    alert("Invalid game id");
+    return false;
+  }
+  return true;
+});
+
+});
+
+
 
 function submit_query(query, typewriter) {
   if(query=="") { return; }
