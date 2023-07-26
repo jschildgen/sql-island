@@ -122,21 +122,26 @@ public function query($query, $readonly = FALSE, $exercise = null) {
 
 
 	if(!$makesResult) {
+		$this->db->exec("BEGIN TRANSACTION");
 		$this->db->exec($q);
 		$error = $this->db->errorInfo();
     if(strlen($error[2]) < 2) {
 
 		  if($exercise != null && !$exercise->getSolved() && $exercise->getSolution() != null && $exercise->getUpdates() == FALSE) {
+				$this->db->exec("ROLLBACK");
 		  	return DB::respondMsg(0, Lang::txt("Was machst du da eigentlich?"));
 		  }
 
       $validationError = $this->isCorrect($exercise, $q);
       if($validationError == "") {
+				$this->db->exec("COMMIT");	
         return DB::respondMsg(1, Lang::txt("Yeah")."!");
       } else {
+				$this->db->exec("ROLLBACK");	
         return DB::respondMsg(-1, $validationError);
       }
     } else {
+			$this->db->exec("ROLLBACK");
       return DB::respondMsg(-1, Lang::txt("Fehler").': '.$error[2]);
     }
 	}
