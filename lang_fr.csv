@@ -154,3 +154,10 @@ Wofür brauchst du so eine lange Anfrage?|Pourquoi as-tu fait une requête si lo
 Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|Maintenant, récupérez votre certificat d'achèvement. Si vous voulez changer le nom sur le certificat, faites-le avec une commande UPDATE sur la table des résidents.
 ausgewandert|émigré
 Zertifikat|Certificat
+Spiel speichern / laden|Enregistrer / Charger le jeu
+Wenn du das Spiel speicherst, kannst du beim nächsten Mal hier weitermachen.|Lorsque vous enregistrez le jeu, vous pouvez reprendre d'ici la prochaine fois.
+Speichern|Enregistrer
+Um ein Spiel zu laden, gib hier die Spiel-ID ein:|Pour charger un jeu, saisissez ici l'ID du jeu:
+Laden|Charger
+Gespeichert|Enregistré
+Notiere dir deine Spiel-ID: |Notez votre ID de jeu: 

@@ -154,3 +154,10 @@ Wofür brauchst du so eine lange Anfrage?|Porque você precisa de um pedido tão
 Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|Receba agora seu certificado por ter completado o jogo. Se você quiser alterar o seu nome no certificado, use um comando UPDATE na tabela HABITANTE.
 ausgewandert|emigrado
 Zertifikat|Certificado
+Spiel speichern / laden|Salvar / Carregar Jogo
+Wenn du das Spiel speicherst, kannst du beim nächsten Mal hier weitermachen.|Quando você salva o jogo, pode continuar daqui na próxima vez.
+Speichern|Salvar
+Um ein Spiel zu laden, gib hier die Spiel-ID ein:|Para carregar um jogo, insira a ID do jogo aqui:
+Laden|Carregar
+Gespeichert|Salvo
+Notiere dir deine Spiel-ID: |Anote sua ID de jogo: 

@@ -154,3 +154,10 @@ Wofür brauchst du so eine lange Anfrage?|Why do you need such a long query?
 Hole jetzt dein Abschluss-Zertifikat ab. Wenn du den Namen auf dem Zertifikat ändern willst, tu dies mit einem UPDATE-Befehl auf der Bewohner-Tabelle.|Get your certificate of completion now! If you want to change the name on the certificate, use an UPDATE command on the inhabitants table.
 ausgewandert|emigrated
 Zertifikat|Certificate
+Spiel speichern / laden|Save / Load Game
+Wenn du das Spiel speicherst, kannst du beim nächsten Mal hier weitermachen.|When you save the game, you can continue from here the next time.
+Speichern|Save
+Um ein Spiel zu laden, gib hier die Spiel-ID ein:|To load a game, enter the game ID here:
+Laden|Load
+Gespeichert|Saved
+Notiere dir deine Spiel-ID: |Note your game ID: 
