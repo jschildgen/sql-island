@@ -70,7 +70,7 @@ class Game {
 		$e[6]->rightimg = "paul";
 		$e[6]->speaker = "R";
 
-		$e[7] = new Exercise(Lang::txt("Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben."));
+		$e[7] = new Exercise(Lang::txt("Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)"));
 		$e[7]->setSolution("SELECT ".Lang::txt("bewohnernr")." FROM ".Lang::txt("bewohner")." WHERE ".Lang::txt("name")." = '".Lang::txt("Fremder")."'");
 		$e[7]->leftimg = "avatar_ueberrascht";
 		$e[7]->rightimg = "paul";
