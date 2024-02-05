@@ -55,7 +55,7 @@ class Game {
 
 		$e[7] = new Exercise("Erich Rasenkopf wurde vergiftet, seine Haut färbt sich grün! Wer tut ihm so etwas nur an? Es gibt mehrere Ideen: Entweder die Person war eifersüchtig auf sein Gold, hat also weniger als Erich. Oder der Übeltäter ist einfach nur böse. Auf jeden Fall war es niemand aus dem gleichen Dorf. In Affenstadt kennt man sich. Ein Häuptling kann es auch nicht gewesen sein. Der Zeuge Carl Ochse hat die Person gesehen und gesagt, dass er sie nicht kannte. Sie habe noch keine Gegenstände bei ihm gekauft. Spazierstöcke und Hämmer gibt es nur bei Carl zu kaufen. Der Pilot kann es nicht sein, er war zu dem Zeitpunkt von Dirty Dieter gefangen gehalten. Carl sagt, der Übeltäter trug ein Fußballtrikot mit seinem Nachnamen auf dem Rücken. Allerdings konnte er nur die Buchstaben S und A erkennen. Gib den Namen der Person aus, die Erich Rasenkopf vergiftet hat!
 ");
-		$e[7]->setSolution("SELECT name FROM bewohner where (status = 'boese' or gold < (select gold from bewohner where name = 'Erich Rasenkopf')) and dorfnr != (select dorfnr from bewohner where name = 'Erich Rasenkopf') and bewohnernr not in (select haeuptling from dorf union select besitzer from gegenstand) and beruf != 'Pilot' and name LIKE '% %s%' and name LIKE '% %a%'
+		$e[7]->setSolution("SELECT name FROM bewohner where (status = 'boese' or gold < (select gold from bewohner where name = 'Erich Rasenkopf')) and dorfnr != (select dorfnr from bewohner where name = 'Erich Rasenkopf') and bewohnernr not in (select haeuptling from dorf union select besitzer from gegenstand where gegenstand in ('Hammer','Spazierstock')) and beruf != 'Pilot' and name LIKE '% %s%' and name LIKE '% %a%'
 ");
 
 
