@@ -29,6 +29,7 @@ if(isset($_GET['id'])) {
    }
 
    $playername = $db->getPlayerName();
+   $playername = substr(strip_tags($playername), 0, 60);
    $cert_id = substr(md5($_SESSION['dbID']),-10);
 
    $stmt = $cert_db->prepare("INSERT OR REPLACE INTO certs(cert_id, game_id, name) VALUES (:c, :g, :n)");
