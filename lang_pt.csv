@@ -161,3 +161,8 @@ Um ein Spiel zu laden, gib hier die Spiel-ID ein:|Para carregar um jogo, insira 
 Laden|Carregar
 Gespeichert|Salvo
 Notiere dir deine Spiel-ID: |Anote sua ID de jogo: 
+Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)|Não precisa me chamar de estranho! Qual é meu idpessoa? (Dica: Use uma consulta SELECT sem asterisco! Em consultas formais, o * significa todas as colunas. Ao invés de utilizá-lo, você pode endereçar uma ou mais colunas, separadas por vírgula, e você obterá somente as colunas que precisar!)
+Sandbox-Modus|Modo sandbox
+Strg+Enter|Ctrl+Enter
+Wenn du den Sandbox-Modus startest, wird das Spiel beendet und du kannst frei auf der Datenbank arbeiten.|Quando você inicia o modo sandbox, o jogo termina e você pode trabalhar livremente no banco de dados.
+Ja!|Sim!

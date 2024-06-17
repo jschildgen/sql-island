@@ -161,3 +161,7 @@ Um ein Spiel zu laden, gib hier die Spiel-ID ein:|To load a game, enter the game
 Laden|Load
 Gespeichert|Saved
 Notiere dir deine Spiel-ID: |Note your game ID: 
+Sandbox-Modus|Sandbox Mode
+Strg+Enter|Ctrl+Enter
+Wenn du den Sandbox-Modus startest, wird das Spiel beendet und du kannst frei auf der Datenbank arbeiten.|When you enable the sandbox mode, the game will stop. Then you can freely query the database. 
+Ja!|Yes!

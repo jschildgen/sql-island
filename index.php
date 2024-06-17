@@ -157,7 +157,7 @@ if(isset($_SESSION['currentExercise'])) {
                 <!--</div>-->
 
 								<div class="row">
-                <button id="submit-query-button" class="large red button radius right" data-style="expand-right" style="margin-top:-5px;"><span class="ladda-label"><?=Lang::txt('Ausführen');?></span></button>
+                <button title="<?=Lang::txt('Strg+Enter');?>" id="submit-query-button" class="large red button radius right" data-style="expand-right" style="margin-top:-5px;"><span class="ladda-label"><?=Lang::txt('Ausführen');?></span></button>
 								</div>
             </div>
         </div>
