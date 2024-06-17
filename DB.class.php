@@ -136,6 +136,9 @@ public function query($query, $readonly = FALSE, $exercise = null) {
       if($validationError == "") {
 				$this->db->exec("COMMIT");	
         return DB::respondMsg(1, Lang::txt("Yeah")."!");
+      } elseif($validationError == "sandbox") {
+				$this->db->exec("COMMIT");	
+        return DB::respondMsg(1, "sandboxOK");
       } else {
 				$this->db->exec("ROLLBACK");	
         return DB::respondMsg(-1, $validationError);
@@ -186,6 +189,11 @@ public function isCorrect($exercise, $query) {
   if($exercise->getSolved()) {
     return "";
   }
+
+	if($_SESSION['sandbox'] === true) {		// Sandbox mode
+		return "sandbox";
+	}
+
 	if($exercise->getSolution() != null && $exercise->getUpdates() == FALSE) {
 		$orderPos = stripos($query, "ORDER BY ");
 		if($orderPos !== FALSE) { $query = substr($query, 0, $orderPos); }
@@ -195,6 +203,7 @@ public function isCorrect($exercise, $query) {
 		}
 
 		$solution = $exercise->getSolution();
+
 		$orderPos  = stripos($solution, " ORDER BY ");
 		if($orderPos !== FALSE) { $solution = substr($solution, 0, $orderPos); }
 

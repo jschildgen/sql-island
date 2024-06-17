@@ -54,11 +54,23 @@ jQuery(document).ready(function ($) {
     $('#restart-modal').foundation('reveal', 'close');
     $('.menu-content').hide();
     $('.menu-bg').hide();
+    $('#story').show();
+    $('#query_section').removeClass("twelve").addClass("eight");
     ajaxdata("query.php?query=restart", query_callback, null, null, null);
+  });
+
+  $('#really-sandbox-button').click(function(e){
+    document.location.href = "./?mode=sandbox";
   });
 
   $('#not-restart-button').click(function(e){
     $('#restart-modal').foundation('reveal', 'close');
+    $('.menu-content').hide();
+    $('.menu-bg').hide();
+  });
+
+  $('#not-sandbox-button').click(function(e){
+    $('#sandbox-modal').foundation('reveal', 'close');
     $('.menu-content').hide();
     $('.menu-bg').hide();
   });
@@ -149,6 +161,13 @@ function query_callback(result, a, b, c) {
 
     $('#querylog').append(table);
   }
+
+  if(res.msg == "sandbox") { return; }
+  if(res.msg == "sandboxOK") { 
+    $('#querylog').append('<div data-alert class="alert-box success radius">OK</div>');
+    return;
+  }
+
   if(res.msg != undefined) {
     if(res.code < 0) { alertType = 'error'; }
     else if (res.code > 0) {

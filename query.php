@@ -1,7 +1,14 @@
 <?php
 if(!isset($_SESSION)) {session_start(); header("Content-Type:text/json; charset=utf-8"); }
 require_once("DB.class.php");
-if(@$_SESSION['extreme'] === true) { require_once("ExtremeGame.class.php"); } else { require_once("Game.class.php"); }
+
+if(@$_SESSION['extreme'] === true) { 
+  require_once("./ExtremeGame.class.php"); 
+} elseif(@$_SESSION['sandbox'] === true) {
+  require_once("./SandboxGame.class.php");
+} else { 
+  require_once("./Game.class.php"); 
+}
 
 $show_exercise = false;
 
