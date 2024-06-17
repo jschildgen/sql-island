@@ -162,9 +162,13 @@ function query_callback(result, a, b, c) {
     $('#querylog').append(table);
   }
 
-  if(res.msg == "sandbox") { return; }
+  if(res.msg == "sandbox") { 
+    updateQuerylogSize();
+    return; 
+  }
   if(res.msg == "sandboxOK") { 
     $('#querylog').append('<div data-alert class="alert-box success radius">OK</div>');
+    updateQuerylogSize();
     return;
   }
 
