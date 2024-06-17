@@ -45,6 +45,13 @@ if(@$_GET['mode'] == "extreme") {
 	header("Location:.");
 }
 
+if(@$_GET['mode'] == "sandbox") {
+  session_destroy();
+  session_start();
+	$_SESSION['sandbox'] = true;
+  header("Location:.");
+}
+
 if(isset($_SESSION['dbID'])) {
 	$db = new DB($_SESSION['dbID']);
 } else {
@@ -54,7 +61,14 @@ if(isset($_SESSION['dbID'])) {
 
 
 
-if(@$_SESSION['extreme'] === true) { require_once("./ExtremeGame.class.php"); } else { require_once("./Game.class.php"); }
+if(@$_SESSION['extreme'] === true) { 
+  require_once("./ExtremeGame.class.php"); 
+} elseif(@$_SESSION['sandbox'] === true) {
+  require_once("./SandboxGame.class.php");
+} else { 
+  require_once("./Game.class.php"); 
+}
+
 if(isset($_SESSION['currentExercise'])) {
         $game = new Game($_SESSION['currentExercise']);
 } else {
@@ -103,6 +117,7 @@ if(isset($_SESSION['currentExercise'])) {
                 <li><a href="#" data-reveal-id="restart-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Spiel neustarten');?></a></li>
                 <li><a href="#" data-reveal-id="save-load-modal" class="medium red button radius" id="save-load-button"><?=Lang::txt('Spiel speichern / laden');?></a></li>
 								<li><a href="#" data-reveal-id="language-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Sprache wechseln');?></a></li>
+                <li><a href="#" data-reveal-id="sandbox-modal" class="medium red button radius" id="sandbox-button"><?=Lang::txt('Sandbox-Modus');?></a></li>
 								<li><a href="#" data-reveal-id="videoModal" class="medium red button radius" id="restart-button"><?=Lang::txt('Game-Trailer Video anschauen');?></a></li>
 								<li><a href="#" data-reveal-id="info-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Info');?></a></li>
             </ul>
@@ -120,7 +135,7 @@ if(isset($_SESSION['currentExercise'])) {
             <div class="offset-by-one animated bounceIn" id="bubble">
                 <div class="text-box clearfix" style="width:250px">
                     <!--<h2>Wow!</h2>-->
-                    <h3 id="exercise_text"><?php if($game->getExercise() != null) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
+                    <h3 id="exercise_text"><?php if($game->getExercise() != null && $_SESSION['sandbox'] !== true) { $game->setPlayerName($db->getPlayerName()); echo $game->getExercise()->getDescription(); } ?></h3>
                     <!--<p>Zeige mir die Liste der Bewohner.</p>-->
 		    <a id="continue_button" class="large red button radius right"><?=Lang::txt('Weiter');?></a>
 		    <a id="certificate_button" class="large green button radius right" style="display:none" href="cert.php" target=_blank"><?=Lang::txt('Zertifikat');?></a>
@@ -134,7 +149,7 @@ if(isset($_SESSION['currentExercise'])) {
 							<div id="rightimg" class="offset-by-four hide-on-phones bg-avatar2"></div>
             </div>
           </div>
-            <div class="eight columns">
+            <div class="eight columns" id="query_section">
                 <div class="text-box clearfix" id="querylog"><pre><code id="testo"></code></pre></div>
 
                 <!--<div class="text-box clearfix" style="margin-top:25px;">-->
@@ -171,6 +186,15 @@ if(isset($_SESSION['currentExercise'])) {
   <p><?=Lang::txt('Wenn du das Spiel neustartest, fängst du wieder ganz von vorne an.');?></p>
   <p><a href="#" id="really-restart-button" class="button"><?=Lang::txt('Ja, Neustart!');?></a>
   <a href="#" id="not-restart-button" class="button"><?=Lang::txt('Nein, weiterspielen!');?></a></p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="sandbox-modal" class="reveal-modal tiny" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle"><?=Lang::txt('Sandbox-Modus');?></h2>
+  <p class="lead"><?=Lang::txt('Bist du dir sicher?');?></p>
+  <p><?=Lang::txt('Wenn du den Sandbox-Modus startest, wird das Spiel beendet und du kannst frei auf der Datenbank arbeiten.');?></p>
+  <p><a href="#" id="really-sandbox-button" class="button"><?=Lang::txt('Ja!');?></a>
+  <a href="#" id="not-sandbox-button" class="button"><?=Lang::txt('Nein, weiterspielen!');?></a></p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
@@ -219,9 +243,8 @@ if(isset($_SESSION['currentExercise'])) {
 	<li data-id="leftimg" data-button="<?=Lang::txt('Weiter');?>" data-options="tip_location: top; prev_button: false">
 		<h4><?=Lang::txt('Das bist du!');?></h4>
 		<p style="font-size:12pt"><?=Lang::txt('Nach einem Flugzeugabsturz stellst du fest, dass du der einzige Überlebende bist. Du landest auf der Insel SQL Island und das Ziel des Spiels ist es, von dieser Insel zu entkommen.');?></p>
-	</li>
-	<li data-id="editor" data-button="<?=Lang::txt('Weiter');?>" data-prev-text="<?=Lang::txt('Zurück');?>" data-options="tip_location: left">
-		<p style="font-size:12pt"><?=Lang::txt('Hier wirst du nachher die Spielbefehle eingeben. Du steuerst das komplette Spiel mit Kommandos aus der Datenbanksprache SQL.');?></p>
+	</li>?=Lang::txt('Nach einem Flugzeugabsturz stellst du fest, dass du der einzige Überlebende bist. Du landest auf der Insel SQL Island und das Ziel des Spiels ist es, von dieser Insel zu entkommen.');?></p>
+	</li>ng::txt('Hier wirst du nachher die Spielbefehle eingeben. Du steuerst das komplette Spiel mit Kommandos aus der Datenbanksprache SQL.');?></p>
 	</li>
 	<li data-id="querylog" data-button="<?=Lang::txt('Weiter');?>" data-prev-text="<?=Lang::txt('Zurück');?>">
 		<p style="font-size:12pt"><?=Lang::txt('Du kannst kein SQL? Keine Angst, hier werden dir im Laufe des Spiels die einzelnen Kommandos gezeigt.');?></p>
@@ -288,9 +311,20 @@ if(isset($_SESSION['currentExercise'])) {
 			abort_on_close : false
 		}});
 
+<?php
+if($_SESSION['sandbox'] !== true) {
+echo <<<JS
 			jQuery(document).ready(function ($) { setTimeout(function() {
 				$(document).foundation('joyride', 'start'); }, 500);
 				});
+JS;
+} else {
+echo <<<JS
+   $('#story').hide();
+   $('#query_section').removeClass("eight").addClass("twelve");
+JS;
+}
+?>
     </script>
   </body>
 </html>
