@@ -305,9 +305,15 @@ if(isset($_SESSION['currentExercise'])) {
 			pre_ride_callback: function() {
 				$('#bubble').hide();
 			},
-			post_ride_callback: function() {
-				$('#bubble').show();
-			},
+      post_ride_callback: function() {
+        $('#bubble').show();
+      },
+      post_step_callback: function(index, tip) {
+      // Check if it's the last step
+      if (index + 1 === $('#joyRideContent').find('li').length) {
+        $('#bubble').show();
+      }
+      },
 			abort_on_close : false
 		}});
 
