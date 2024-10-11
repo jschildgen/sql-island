@@ -12,7 +12,7 @@ beruf|foglalkozas|
 gold|arany|
 status|statusz|
 Paul Backmann|Pék Jani|
-m|m|
+m|n|
 Baecker|pék|
 friedlich|barátságos|
 Ernst Peng|Magas Józsi|
@@ -30,16 +30,16 @@ Peter Schlachter|Villám Peti|
 Arthur Schneiderpaule|Szabó Dani|
 Pilot|pilóta|
 gefangen|elrabolták|
-Tanja Trommler|Tiffany dobos|
+Tanja Trommler|Dobos Ica|
 Peter Trommler|Dobos Peti|
 Dirty Doerthe|Piszkos Juli|
 Erntehelfer|farmer|
 Otto Armleuchter|Napos Ottó|
-Haendler|ügynök|
+Haendler|árus|
 Fritz Dichter|Hajas Levi|
 Hoerbuchautor|író|
 Enrico Zimmermann|Ács Géza|
-Helga Rasenkopf|Helen Grasshead|
+Helga Rasenkopf|Füves Helga|
 Irene Hutmacher|Arany Tomi|
 Erich Rasenkopf|Füves Bandi|
 Rudolf Gaul|Lovas Laci|
@@ -65,13 +65,13 @@ Wow, hier ist einiges los!|Hú, mennyi ember!|
 Mensch, was bin ich hungrig. Ich suche mir erst einmal einen Metzger, bei dem ich eine Scheibe Wurst schnorren kann.|A fene! Éhes vagyok. Megyek és megkeresem a hentest, hogy kérjek egy kis ingyen kolbászt.|
 Hier, lass es dir schmecken! Und pass bei deiner Reise gut auf, dass du dich von bösen Bewohnern fern hälst, solange du unbewaffnet bist. Denn nicht jeder hier ist friedlich!|Hát itt vagy! Jó étvágyat! De vigyázz magadra! Amíg fegyvertelen vagy, maradj távol a gazemberektől. Ezen a szigeten nem mindenki barátságos.|
 Danke Erich! Nagut, dann muss ich mal schauen, welche Bewohner friedlich sind.|Köszönöm! Oké, lássuk, ki a barátságos ezen a szigeten...|
-Früher oder später brauche ich aber ein Schwert. Lasst uns einen friedlichen Waffenschmied suchen, der mir ein Schwert schmieden kann. (Hinweis: Bedingungen im WHERE-Teil kannst du mit AND verknüpfen)|Elkerülhetetlen, hogy kardot szerezzek magamnak. Keresek egy barátságos fegyverkészítőt, aki kovácsol nekem egyet. (Tipp: A WHERE után több feltételt is használhatsz, ha teszel közüéjük egy AND kifejezést)|
-Hm, das sind sehr wenige. Vielleicht gibt es noch andere friedliche Schmiede, z.B. Hufschmied, Schmied, Waffenschmied, etc. Probiere beruf LIKE '%schmied', um alle Bewohner zu finden, deren Beruf mit 'schmied' endet (% ist ein Platzhalter für beliebig viele Zeichen).|Ó, ez nem néz ki jól. Talán más barátságos kovácsok a segítségemre lesznek, például egy kovácsmester. Próbáld ki: job LIKE '%kovács', hogy megtaláld az összes lakost, akinek a foglalkozása „kovács”-ra végződik (a % egy joker kártya, amely tetszőleges számú karaktert tartalmaz).|
+Früher oder später brauche ich aber ein Schwert. Lasst uns einen friedlichen Waffenschmied suchen, der mir ein Schwert schmieden kann. (Hinweis: Bedingungen im WHERE-Teil kannst du mit AND verknüpfen)|Elkerülhetetlen, hogy kardot szerezzek magamnak. Keresek egy barátságos fegyverkovácsot, aki készít nekem egyet. (Tipp: A WHERE után több feltételt is használhatsz, ha teszel közéjük egy AND kifejezést)|
+Hm, das sind sehr wenige. Vielleicht gibt es noch andere friedliche Schmiede, z.B. Hufschmied, Schmied, Waffenschmied, etc. Probiere beruf LIKE '%schmied', um alle Bewohner zu finden, deren Beruf mit 'schmied' endet (% ist ein Platzhalter für beliebig viele Zeichen).|Ó, ez nem sok. Talán más barátságos kovácsok a segítségemre lesznek, például egy mesterkovács. Próbáld ki: job LIKE '%kovács', hogy megtaláld az összes lakost, akinek a foglalkozása „kovács”-ra végződik (a % egy joker kártya, amely tetszőleges számú karaktert tartalmaz).|
 schmied|kovács|
 Das sieht schon besser aus! Diese Schmiede kommen alle in Frage. Ich gehe sie dann mal nacheinander besuchen.|Így már jobban néz ki! Megyek és meglátogatom azokat a kovácsokat.|
 Hallo Fremder, wohin des Wegs? Ich bin Paul, der Bürgermeister von Affenstadt. Ich trage dich gerne als Bewohner meines Dorfes ein.|Szia idegen! Hová mész? János vagyok, Majomváros polgármestere. Bejegyezlek a nyilvántartásba, mint egy új polgárt.|
-Fremder|Idegen.|
-Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)|Nem kell idegennek hívnod! Mi a személyid-d? (Tipp: Használj SELECT lekérdezést csillag nélkül. A korábbi lekérdezésekben a * jelentése: minden oszlop. A csillag helyett egy vagy több oszlopot is megcímezhet (vesszővel elválasztva), így csak a szükséges oszlopokat kapod meg.)|
+Fremder|Idegen|
+Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)|Nem kell idegennek hívnod! Mi az azonositoid-d? (Tipp: Használj SELECT lekérdezést csillag nélkül. A korábbi lekérdezésekben a * jelentése: minden oszlop. A csillag helyett egy vagy több oszlopot is megcímezhet (vesszővel elválasztva), így csak a szükséges oszlopokat kapod meg.)|
 Hallo Ernst! Was kostet bei dir ein Schwert?|Szia Józsi! Mennyi egy kard?|
 Ich schmiede dir ein Schwert für nur 150 Gold. Billiger bekommst du es nirgendwo! Wie viel Gold hast du momentan?|150 aranyért felajánlhatom, hogy készítek neked egy kardot. Ez a legolcsóbb, amit találsz! Mennyi aranyad van?|
 Mist, ich habe ja noch gar kein Gold. Ich habe aber auch keine Lust dafür arbeiten zu gehen. Hmmm, vorhin habe ich viele Gegenstände herumliegen gesehen, die niemandem gehören. Diese Gegenstände könnte ich einsammeln und an Händler verkaufen. Liste alle Gegenstände auf, die niemandem gehören. Tipp: Herrenlose Gegenstände erkennt man an WHERE besitzer IS NULL.|A fenébe! Nincs zsozsó, nincs kard. Kell lennie más aranyszerzési lehetőségnek is, mint a munkába járás. Talán gyűjthetnék gazdátlan tárgyakat, és eladhatnám őket! Készíthetek egy listát az összes tárgyról, ami nem tartozik senkihez? (Tipp: A gazdátlan tárgyakat a következő alapján ismerheted fel: WHERE tulajdonos IS NULL)|
@@ -79,17 +79,17 @@ So viele tolle Sachen!|Mennyi menő dolog!|
 Lasst uns die Kaffeetasse einsammeln. Eine Kaffeetasse kann man immer mal gebrauchen.|Hurrá, egy kávéscsésze! Gyűjtsük is össze!|
 Kennst du einen Trick, wie wir alle Gegenstände auf einmal einsammeln können, die niemandem gehören?|Tudsz esetleg egy trükköt, hogyan gyűjtsük össze az összes tulajdonos nélküli tárgyat?|
 Jawoll! Welche Gegenstände besitze ich nun?|Most pedig nézzük meg a nálad lévő tárgyak listáját!|
-Finde friedliche Bewohner mit dem Beruf Haendler oder Kaufmann. Eventuell möchten sie etwas von uns kaufen. (Hinweis: Achte bei AND- und OR-Verknüpfungen auf korrekte Klammerung)|Keress egy barátságos lakost, aki vagy házaló ügynök, vagy kereskedő. Talán meg akarják venni néhány tárgyadat. (Tipp: Ha AND-et és OR-t is használsz, ne felejtsd el helyesen kitenni a zárójeleket!)|
-Ich interessiere mich für den Ring und die Teekanne. Der Rest ist alles Schrott. Gib mir bitte die beiden Gegenstände. Meine Bewohnernummer ist übrigens 15.|Szeretném megszerezni a gyűrűt és a teáskannát. A többi csak ócskavas. Kérem, add nekem ezt a két tárgyat! A személyi azonosítóm 15.|
+Finde friedliche Bewohner mit dem Beruf Haendler oder Kaufmann. Eventuell möchten sie etwas von uns kaufen. (Hinweis: Achte bei AND- und OR-Verknüpfungen auf korrekte Klammerung)|Keress egy barátságos lakost, aki vagy árus, vagy kereskedő. Talán meg akarják venni néhány tárgyadat. (Tipp: Ha AND-et és OR-t is használsz, ne felejtsd el helyesen kitenni a zárójeleket!)|
+Ich interessiere mich für den Ring und die Teekanne. Der Rest ist alles Schrott. Gib mir bitte die beiden Gegenstände. Meine Bewohnernummer ist übrigens 15.|Szeretném megszerezni a gyűrűt és a teáskannát. A többi csak ócskavas. Kérem, add nekem ezt a két tárgyat! Az azonositoid-m 15.|
 Dankeschön!|Köszönöm!|
 Hier hast du einen Haufen Gold!|Tessék, egy kis arany!|
 Leider reicht das noch nicht für ein Schwert. Dann muss ich wohl doch arbeiten. Bevor ich mich jedoch irgendwo bewerbe, sollte ich vielleicht meinen Namen von Fremder auf meinen richtigen Namen ändern, ansonsten wird mich niemand einstellen.|Sajnos, ez nem elég arany egy kard megvásárlásához. Úgy tűnik, mégiscsak dolgoznom kell. Talán nem rossz ötlet, ha megváltoztatom a nevemet Idegen-ről az igazi nevemre, mielőtt jelentkezem egy állásra.|
 In meiner Freizeit backe ich gerne. Ich glaube, ich verdiene mir ein bisschen Geld als Bäcker. Zeige mir alle Bäcker. Tipp: Mit ORDER BY gold kannst du die Liste sortieren, mit ORDER BY gold DESC steht sogar der reichste Bäcker oben.|Mivel a sütés az egyik hobbim, miért ne találhatnék egy péket, akinek dolgozhatnék? (Tipp: Sorold fel az összes péket, és az eredmények rendezéséhez használd a 'ORDER BY arany' szót. A 'ORDER BY arany DESC' még jobb, mert akkor a leggazdagabb pék a lista tetején van.)|
 Ach, der Paul! Den kenn ich doch!|Aha, János! Ismerem őt!|
-Hi, da bist du ja wieder! Soso, %%%PLAYER_NAME%%% heißt du also. Und du willst als Bäcker arbeiten? Da sag ich nicht nein. Ich zahle dir pro hundert Brötchen, die du mir bäckst, 1 Gold.|Szia, megint te! Szóval, %%%%PLAYER_NAME%%%% a neved. Láttam, hogy pékként akarsz dolgozni? Rendben. 100 zsemléért 1 aranyat kapsz.|
+Hi, da bist du ja wieder! Soso, %%%PLAYER_NAME%%% heißt du also. Und du willst als Bäcker arbeiten? Da sag ich nicht nein. Ich zahle dir pro hundert Brötchen, die du mir bäckst, 1 Gold.|Szia, megint te! Szóval, %%%PLAYER_NAME%%% a neved. Láttam, hogy pékként akarsz dolgozni? Rendben. 100 zsemléért 1 aranyat kapsz.|
 (8 Stunden später...) Hier bittesehr, zehntausend Brötchen! Ich kündige! Ich habe nun genug Gold, um mir ein Schwert zu kaufen! Mal schauen, was jetzt mit meinem Kontostand passiert.|(8 órával később...) Tessék, tízezer zsemlét csináltam! Elég is volt! Ezzel elég pénzem lesz egy kardra. Lássuk, mennyi pénzem van!|
 Hier ist dein neues Schwert, %%%PLAYER_NAME_FUNNY%%%! Nun kannst du überall hin!|Tessék az új kardod, %%%PLAYER_NAME_FUNNY%%%! Most már biztonságban vagy!|
-Ich heiße %%%PLAYER_NAME%%%! Aber trotzdem danke.|Az én nevem %%%PLAYER_NAME%%%%! De azért köszönöm!|
+Ich heiße %%%PLAYER_NAME%%%! Aber trotzdem danke.|Az én nevem %%%PLAYER_NAME%%%! De azért köszönöm!|
 Schwert|kard|
 Gibt es auf der Insel einen Piloten? Er könnte mich nach Hause fliegen.|Van véletlenül egy is pilóta ezen a szigeten? Ő haza tudna vinni engem.|
 Oh, er hat den Status 'gefangen'.|Ó, nem, a pilótát „elrabolták”.|
@@ -98,10 +98,10 @@ Auf diese Weise kannst du das Dorf mit der Dorf-Nummer suchen, die bei Dirty Die
 Danke für den Tipp. Dann suche ich erst einmal den Häuptling des Dorfes Zwiebelhausen. Im Feld haeuptling der Tabelle dorf steht ja die bewohnernr des Häuptlings des jeweiligen Dorfes.|Köszi a tippet! A JOIN segítségével megtudhatom Hagymafalu vezetőjének a nevét. (Tipp: A falu tábla „vezeto” oszlopában a vezeto azonositoid-je van tárolva)| 
 Juhu! Ich hab's! Dann gehe ich mal Fritz besuchen, um ihn nach Dirty Dieter und dem Piloten zu fragen.|Megvan! Meglátogatom Levit, és megkérdezem őt Piszkos Feriről és a pilótáról.|
 Hm, wie viele Einwohner hat eigentlich Zwiebelhausen?|Hány lakosa van Hagymafalunak?|
-Hallo %%%PLAYER_NAME%%%, Dirty Dieter hält den Piloten im Haus seiner Schwester gefangen. Soll ich dir verraten, wie viele Frauen es in Zwiebelhausen gibt? Ach was, das kannst du schon selbst herausfinden! (Hinweis: Frauen erkennt man an geschlecht = 'w')|Szia %%%%PLAYER_NAME%%%%, a pilótát Piszkos Feri tartja fogva a nővére házában. Szeretnéd tudni, hogy hány nő él Hagymafaluban? Várj csak, ezt magad is ki tudod találni! (Tipp: a nők a neme mezőnél így jelennek meg = 'n')|
+Hallo %%%PLAYER_NAME%%%, Dirty Dieter hält den Piloten im Haus seiner Schwester gefangen. Soll ich dir verraten, wie viele Frauen es in Zwiebelhausen gibt? Ach was, das kannst du schon selbst herausfinden! (Hinweis: Frauen erkennt man an geschlecht = 'w')|Szia %%%PLAYER_NAME%%%, a pilótát Piszkos Feri tartja fogva a nővére házában. Szeretnéd tudni, hogy hány nő él Hagymafaluban? Várj csak, ezt magad is ki tudod találni! (Tipp: a nők a neme mezőnél így jelennek meg = 'n')|
 Ha, nur eine Frau. Mal schauen, wie sie heißt.|Mi a szösz, csak egy nő? Mi a neve?|
 So! Dann gehe ich jetzt da hin!|Gyerünk!|
-%%%PLAYER_NAME%%%, gib mir alles Gold, was die Bewohner von unserem Nachbardorf Gurkendorf zusammen besitzen und ich lasse den Piloten frei! Du willst wissen, wie viel das ist? Ich zeige es dir!|%%%%PLAYER_NAME%%%%, ha átadod nekem a közeli falunk, Uborkás összes vagyonát, akkor elengedem a pilótát. Most megmutatom, hogy mire is gondoltam.|
+%%%PLAYER_NAME%%%, gib mir alles Gold, was die Bewohner von unserem Nachbardorf Gurkendorf zusammen besitzen und ich lasse den Piloten frei! Du willst wissen, wie viel das ist? Ich zeige es dir!|%%%PLAYER_NAME%%%, ha átadod nekem a közeli falunk, Uborkás összes vagyonát, akkor elengedem a pilótát. Most megmutatom, hogy mire is gondoltam.|
 So viel Gold werde ich niemals allein durch Brötchenbacken verdienen können. Ich muss mir etwas anderes einfallen lassen. Wenn ich Gegenstände verkaufe und zusätzlich noch als Bäcker arbeite, kann ich maximal so viel Gold bekommen, wie die Händler, Kaufmänner und Bäcker zusammen besitzen. Wie viel ist das?|Ó, nem, a kenyérsütés önmagában nem oldja meg a problémáimat. Ha azonban tovább dolgozom és kereskedem talán több aranyat kereshetek, mint amennyi az egész falu teljes vagyona. De ez vajon mennyi is?|
 Das ist viel zu wenig.|Ez nem elég.|
 Schauen wir mal die gesamten sowie durchschnittlichen Goldvorräte der einzelnen Berufe an.|Nézzük meg, mennyi aranyat birtokolnak az emberek átlagosan a munkájuktól függően.|
@@ -130,7 +130,7 @@ Hier unten steht, welche Tabellen es gibt: Dorf, Bewohner und Gegenstand. In Kla
 Los geht's!|Gyerünk!|
 Über diesen Menü-Knopf kannst du das Spiel neustarten oder dir diese Anleitung noch einmal anschauen. Aber genug geredet, lasst uns anfangen!|Ha újra akarod indítani a játékot, vagy újra akarod játszani a játékot, csak kattints erre a menügombra.|
 Schreibe deine SQL-Anfrage hier hinein|Ide írd az SQL lekérdezésedet|
-Yeah|Igen|
+Yeah|OK|
 Fehler|Hiba|
 Es kommen zu viele Zeilen raus.|Ez túl sok sor.|
 Hinweis: Achte bei Werten, die in Anführungszeichen stehen, auf Groß-/Kleinschreibung.|Tipp: Az idézőjelben lévő értékek nagy- és kisbetű-érzékenyek.|
