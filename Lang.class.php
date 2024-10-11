@@ -31,6 +31,8 @@ class Lang
 			$lang_file = "lang_pt.csv";
 		} elseif(self::$language == "fr") {
 			$lang_file = "lang_fr.csv";
+		} elseif(self::$language == "hu") {
+			$lang_file = "lang_hu.csv";
 		} else {
 			$lang_file = "lang_en.csv";
 		}
