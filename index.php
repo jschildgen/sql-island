@@ -243,8 +243,10 @@ if(isset($_SESSION['currentExercise'])) {
 	<li data-id="leftimg" data-button="<?=Lang::txt('Weiter');?>" data-options="tip_location: top; prev_button: false">
 		<h4><?=Lang::txt('Das bist du!');?></h4>
 		<p style="font-size:12pt"><?=Lang::txt('Nach einem Flugzeugabsturz stellst du fest, dass du der einzige Überlebende bist. Du landest auf der Insel SQL Island und das Ziel des Spiels ist es, von dieser Insel zu entkommen.');?></p>
-	</li>?=Lang::txt('Nach einem Flugzeugabsturz stellst du fest, dass du der einzige Überlebende bist. Du landest auf der Insel SQL Island und das Ziel des Spiels ist es, von dieser Insel zu entkommen.');?></p>
-	</li>ng::txt('Hier wirst du nachher die Spielbefehle eingeben. Du steuerst das komplette Spiel mit Kommandos aus der Datenbanksprache SQL.');?></p>
+	</li>
+  <li data-id="editor" data-button="<?=Lang::txt('Weiter');?>" data-prev-text="<?=Lang::txt('Zurück');?>" data-options="tip_location: top;">
+    <p style="font-size:12pt"><?=Lang::txt('Hier wirst du nachher die Spielbefehle eingeben. Du steuerst das komplette Spiel mit Kommandos aus der Datenbanksprache SQL.');?></p>
+	</li>
 	</li>
 	<li data-id="querylog" data-button="<?=Lang::txt('Weiter');?>" data-prev-text="<?=Lang::txt('Zurück');?>">
 		<p style="font-size:12pt"><?=Lang::txt('Du kannst kein SQL? Keine Angst, hier werden dir im Laufe des Spiels die einzelnen Kommandos gezeigt.');?></p>
