@@ -220,6 +220,7 @@ if(isset($_SESSION['currentExercise'])) {
      <a href="./?lang=en" class="button">English</a>
      <a href="./?lang=pt" class="button">Português</a>
      <a href="./?lang=fr" class="button">Français</a>
+     <a href="./?lang=hu" class="button">Magyar / Hungarian</a>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
