@@ -12,13 +12,13 @@ beruf|foglalkozas|
 gold|arany|
 status|statusz|
 Paul Backmann|Pék Jani|
-m|n|
+m|f|
 Baecker|pék|
 friedlich|barátságos|
 Ernst Peng|Magas Józsi|
 Waffenschmied|fegyverkovács|
 Rita Ochse|Apró Rita|
-w|f|
+w|n|
 Carl Ochse|Apró Karcsi|
 Kaufmann|kereskedő|
 Dirty Dieter|Piszkos Feri|
@@ -29,7 +29,7 @@ Metzger|hentes|
 Peter Schlachter|Villám Peti|
 Arthur Schneiderpaule|Szabó Dani|
 Pilot|pilóta|
-gefangen|elrabolták|
+gefangen|elrabolva|
 Tanja Trommler|Dobos Ica|
 Peter Trommler|Dobos Peti|
 Dirty Doerthe|Piszkos Juli|
@@ -69,9 +69,9 @@ Früher oder später brauche ich aber ein Schwert. Lasst uns einen friedlichen W
 Hm, das sind sehr wenige. Vielleicht gibt es noch andere friedliche Schmiede, z.B. Hufschmied, Schmied, Waffenschmied, etc. Probiere beruf LIKE '%schmied', um alle Bewohner zu finden, deren Beruf mit 'schmied' endet (% ist ein Platzhalter für beliebig viele Zeichen).|Ó, ez nem sok. Talán más barátságos kovácsok a segítségemre lesznek, például egy mesterkovács. Próbáld ki: job LIKE '%kovács', hogy megtaláld az összes lakost, akinek a foglalkozása „kovács”-ra végződik (a % egy joker kártya, amely tetszőleges számú karaktert tartalmaz).|
 schmied|kovács|
 Das sieht schon besser aus! Diese Schmiede kommen alle in Frage. Ich gehe sie dann mal nacheinander besuchen.|Így már jobban néz ki! Megyek és meglátogatom azokat a kovácsokat.|
-Hallo Fremder, wohin des Wegs? Ich bin Paul, der Bürgermeister von Affenstadt. Ich trage dich gerne als Bewohner meines Dorfes ein.|Szia idegen! Hová mész? János vagyok, Majomváros polgármestere. Bejegyezlek a nyilvántartásba, mint egy új polgárt.|
+Hallo Fremder, wohin des Wegs? Ich bin Paul, der Bürgermeister von Affenstadt. Ich trage dich gerne als Bewohner meines Dorfes ein.|Szia Idegen! Hová mész? János vagyok, Majomváros polgármestere. Bejegyezlek a nyilvántartásba, mint egy új polgárt.|
 Fremder|Idegen|
-Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)|Nem kell idegennek hívnod! Mi az azonositoid-d? (Tipp: Használj SELECT lekérdezést csillag nélkül. A korábbi lekérdezésekben a * jelentése: minden oszlop. A csillag helyett egy vagy több oszlopot is megcímezhet (vesszővel elválasztva), így csak a szükséges oszlopokat kapod meg.)|
+Hey, nenn mich doch nicht Fremder! Naja, egal. Wie ist eigentlich meine bewohnernr? (Tipp: Verwende eine SELECT-Abfrage ohne Sternchen! Der * in den vorherigen Abfragen stand immer für 'alle Spalten'. Stattdessen kannst du aber auch einen oder mehrere mit Komma getrennte Spaltennamen angeben.)|Nem kell Idegennek hívnod! Mi az azonositoid-d? (Tipp: Használj SELECT lekérdezést csillag nélkül. A korábbi lekérdezésekben a * jelentése: minden oszlop. A csillag helyett egy vagy több oszlopot is megcímezhet (vesszővel elválasztva), így csak a szükséges oszlopokat kapod meg.)|
 Hallo Ernst! Was kostet bei dir ein Schwert?|Szia Józsi! Mennyi egy kard?|
 Ich schmiede dir ein Schwert für nur 150 Gold. Billiger bekommst du es nirgendwo! Wie viel Gold hast du momentan?|150 aranyért felajánlhatom, hogy készítek neked egy kardot. Ez a legolcsóbb, amit találsz! Mennyi aranyad van?|
 Mist, ich habe ja noch gar kein Gold. Ich habe aber auch keine Lust dafür arbeiten zu gehen. Hmmm, vorhin habe ich viele Gegenstände herumliegen gesehen, die niemandem gehören. Diese Gegenstände könnte ich einsammeln und an Händler verkaufen. Liste alle Gegenstände auf, die niemandem gehören. Tipp: Herrenlose Gegenstände erkennt man an WHERE besitzer IS NULL.|A fenébe! Nincs zsozsó, nincs kard. Kell lennie más aranyszerzési lehetőségnek is, mint a munkába járás. Talán gyűjthetnék gazdátlan tárgyakat, és eladhatnám őket! Készíthetek egy listát az összes tárgyról, ami nem tartozik senkihez? (Tipp: A gazdátlan tárgyakat a következő alapján ismerheted fel: WHERE tulajdonos IS NULL)|
@@ -102,15 +102,15 @@ Hallo %%%PLAYER_NAME%%%, Dirty Dieter hält den Piloten im Haus seiner Schwester
 Ha, nur eine Frau. Mal schauen, wie sie heißt.|Mi a szösz, csak egy nő? Mi a neve?|
 So! Dann gehe ich jetzt da hin!|Gyerünk!|
 %%%PLAYER_NAME%%%, gib mir alles Gold, was die Bewohner von unserem Nachbardorf Gurkendorf zusammen besitzen und ich lasse den Piloten frei! Du willst wissen, wie viel das ist? Ich zeige es dir!|%%%PLAYER_NAME%%%, ha átadod nekem a közeli falunk, Uborkás összes vagyonát, akkor elengedem a pilótát. Most megmutatom, hogy mire is gondoltam.|
-So viel Gold werde ich niemals allein durch Brötchenbacken verdienen können. Ich muss mir etwas anderes einfallen lassen. Wenn ich Gegenstände verkaufe und zusätzlich noch als Bäcker arbeite, kann ich maximal so viel Gold bekommen, wie die Händler, Kaufmänner und Bäcker zusammen besitzen. Wie viel ist das?|Ó, nem, a kenyérsütés önmagában nem oldja meg a problémáimat. Ha azonban tovább dolgozom és kereskedem talán több aranyat kereshetek, mint amennyi az egész falu teljes vagyona. De ez vajon mennyi is?|
+So viel Gold werde ich niemals allein durch Brötchenbacken verdienen können. Ich muss mir etwas anderes einfallen lassen. Wenn ich Gegenstände verkaufe und zusätzlich noch als Bäcker arbeite, kann ich maximal so viel Gold bekommen, wie die Händler, Kaufmänner und Bäcker zusammen besitzen. Wie viel ist das?|Ó, nem, a kenyérsütés önmagában nem oldja meg a problémáimat. Ha azonban tovább dolgozom és kereskedem talán több aranyat kereshetek, mint amennyi az egész sziget összes falujában dolgozó összes pék, árus és kereskedő együttes vagyona. De ez vajon mennyi is?|
 Das ist viel zu wenig.|Ez nem elég.|
 Schauen wir mal die gesamten sowie durchschnittlichen Goldvorräte der einzelnen Berufe an.|Nézzük meg, mennyi aranyat birtokolnak az emberek átlagosan a munkájuktól függően.|
 Interessant, die Metzger haben also das meiste Gold. Warum auch immer... Wie viel Gold haben im Durchschnitt die einzelnen Bewohnergruppen je nach Status (friedlich, böse, gefangen)?|Nagyon érdekes: Valamiért a hentesek birtokolják a legtöbb aranyat. Mennyi arannyal rendelkeznek átlagosan a lakosok, állapotuktól függően (barátságos, ...)?|
 Okay, ich muss also die bösen Bewohner ausrauben.|Oké, tehát az egyetlen lehetőség a gazemberek kirablása.|
 Dann kann ich auch gleich Dirty Dieter mit dem Schwert töten und den Piloten befreien.|Vagy akár meg is ölhetném Piszkos Ferit a kardommal!|
-Heeeey! Jetzt bin ich aber sauer! Was tust du wohl als nächstes, %%%PLAYER_NAME%%%?|Héééé! Most nagyon dühös vagyok! Mi lesz a következő lépésed, %%%JÁTÉKOS_NÉV%%%%?|
-Yeah! Jetzt muss ich nur noch den Piloten befreien.|Ez az! Most elengedem a pilótát!|
-Vielen vielen Dank, %%%PLAYER_NAME%%%! Jetzt fliege ich dich nach Hause.|Köszönöm, hogy elengedtél, %%%JÁTÉKOSNÉV%%%! Hazarepítelek!|
+Heeeey! Jetzt bin ich aber sauer! Was tust du wohl als nächstes, %%%PLAYER_NAME%%%?|Héééé! Most nagyon dühös vagyok! Mi lesz a következő lépésed, %%%PLAYER_NAME%%%?|
+Yeah! Jetzt muss ich nur noch den Piloten befreien.|Ez az! Most elengedem a pilótát azzal hogy a elrabolva helyett barátságos-sá teszem!|
+Vielen vielen Dank, %%%PLAYER_NAME%%%! Jetzt fliege ich dich nach Hause.|Köszönöm, hogy elengedtél, %%%PLAYER_NAME%%%! Hazarepítelek!|
 Juhu! Und als Andenken nehme ich mein Schwert, ein bisschen Gold und die nutzlosen Gegenstände mit nach Hause. Was für ein Abenteuer!|Magammal viszem a kardomat, némi aranyat és sok haszontalan tárgyat emlékbe. Micsoda nagy kaland!|
 Weiter|Folytatás|
 DORF|FALU|
@@ -147,7 +147,7 @@ Danach wird das Spiel neu gestartet|Ezután a játék újraindul.|
 Die Spalten sind falsch.|Az oszlopok helytelenek.|
 Info|Info|
 Ein Text-Adventure-Lernspiel für die Datenbanksprache SQL|Szöveges kalandjáték az SQL adatbázis-nyelv tanulására|
-Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische, Adilson Vahldick für die portugiesische Übersetzung, Hervé L\'helguen für die Übersetzung ins Französische und Péter Perger für die ungarische Übersetzung.|A játékot Johannes Schildgen fejlesztette a Kaiserslauterni Műszaki Egyetemen a Heterogén Információs Rendszerek csoportban. Nagy köszönet illeti Isabell Ruthot, aki elkészítette a grafikákat, valamint Marlene van den Eckert az angol fordításért, Adilson Vahldicket a portugál fordításért, Hervé L'helguent a francia fordításért és Péter Pergert a magyar fordításért.|
+Das Spiel wurde an der Technischen Universität Kaiserslautern in der AG Heterogene Informationssysteme / Lehrgebiet Informationssysteme von Johannes Schildgen entwickelt. Ein großer Dank geht an Isabell Ruth, die die Grafiken erstellt hat, sowie an Marlene van den Ecker für die Übersetzung ins Englische, Adilson Vahldick für die portugiesische Übersetzung, Hervé L\'helguen für die Übersetzung ins Französische und Péter Perger für die ungarische Übersetzung.|A játékot Johannes Schildgen fejlesztette a Kaiserslauterni Műszaki Egyetemen a Heterogén Információs Rendszerek csoportban. Köszönet Isabell Ruthnak a képek elkészítéséért.|
 Weitere Infos, Impressum, Kontakt und Publikationen|További információk, elérhetőségek és publikációk.|
 Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.|Ó, vagy túl sok, vagy túl kevés változtatást végeztél.|
 Wofür brauchst du so eine lange Anfrage?|Miért van szükséged ilyen hosszú lekérdezésre?|
@@ -161,7 +161,7 @@ Um ein Spiel zu laden, gib hier die Spiel-ID ein:|A játék betöltéséhez írd
 Laden|Betöltés|
 Gespeichert|Mentve|
 Notiere dir deine Spiel-ID: |Jegyezd meg a játék azonosítóját: |
-Sandbox-Modus|Homokozó Mód|
+Sandbox-Modus|Homokozó mód|
 Strg+Enter|Ctrl+Enter|
 Wenn du den Sandbox-Modus startest, wird das Spiel beendet und du kannst frei auf der Datenbank arbeiten.|Ha bekapcsolod a homokozó módot, a játék leáll. Ezután szabadon lekérdezheted az adatbázist. |
-Ja!|Igen!|
+Ja!|Rendben!|
