@@ -2,6 +2,11 @@
 
 if(isset($_SESSION['lang'])) {
 	Lang::setLanguage($_SESSION['lang']);
+} else {
+	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+		$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		Lang::setLanguage($browser_lang);
+	}
 }
 
 class Lang
@@ -27,13 +32,9 @@ class Lang
     while(self::$lock) { sleep(1); }
     self::$lock = true;
 
-		if(self::$language == "pt") {
-			$lang_file = "lang_pt.csv";
-		} elseif(self::$language == "fr") {
-			$lang_file = "lang_fr.csv";
-		} elseif(self::$language == "hu") {
-			$lang_file = "lang_hu.csv";
-		} else {
+		$lang_file = "lang_" . self::$language . ".csv";
+		
+		if(!file_exists($lang_file)) {
 			$lang_file = "lang_en.csv";
 		}
 
