@@ -116,7 +116,7 @@ if(isset($_SESSION['currentExercise'])) {
                 <li><a href="#" class="medium red button radius" id="joyride-button"><?=Lang::txt('Spielanleitung');?></a></li>
                 <li><a href="#" data-reveal-id="restart-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Spiel neustarten');?></a></li>
                 <li><a href="#" data-reveal-id="save-load-modal" class="medium red button radius" id="save-load-button"><?=Lang::txt('Spiel speichern / laden');?></a></li>
-								<li><a href="#" data-reveal-id="language-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Sprache wechseln'); if($_SESSION['lang']!=="en") { echo "<br>Change Language"; } ?></a></li>
+								<li><a href="#" data-reveal-id="language-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Sprache wechseln'); if(isset($_SESSION['lang']) && $_SESSION['lang']!=="en") { echo "<br>Change Language"; } ?></a></li>
                 <li><a href="#" data-reveal-id="sandbox-modal" class="medium red button radius" id="sandbox-button"><?=Lang::txt('Sandbox-Modus');?></a></li>
 								<li><a href="#" data-reveal-id="videoModal" class="medium red button radius" id="restart-button"><?=Lang::txt('Game-Trailer Video anschauen');?></a></li>
 								<li><a href="#" data-reveal-id="info-modal" class="medium red button radius" id="restart-button"><?=Lang::txt('Info');?></a></li>
@@ -222,6 +222,7 @@ if(isset($_SESSION['currentExercise'])) {
      <a href="./?lang=pt" class="button">Português</a>
      <a href="./?lang=fr" class="button">Français</a>
      <a href="./?lang=hu" class="button">Magyar / Hungarian</a>
+     <a href="./?lang=it" class="button">Italiano</a></p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 

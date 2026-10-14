@@ -71,9 +71,16 @@ public function getDbID() { return $this->dbID; }
  * -1: 	error
  *  1:  correct
  */
+public static function formatError($error_msg) {
+  if(Lang::getLanguage() == "it") {
+    $error_msg = str_replace("no such table", "tabella inesistente", $error_msg);
+  }
+  return $error_msg;
+}
+
 public static function respondMsg($code, $msg = null, $result = null) {
   $toJson["code"] = $code;
-  if($msg != null) { $toJson["msg"] = $msg; }
+  if($msg != null) { $toJson["msg"] = self::formatError($msg); }
   if($result != null) { $toJson["result"] = $result; }
 	return $toJson;
 }

@@ -6,6 +6,7 @@ if(isset($_SESSION['lang'])) {
 	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 		$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 		Lang::setLanguage($browser_lang);
+		$_SESSION['lang'] = $browser_lang;
 	}
 }
 
@@ -17,6 +18,7 @@ class Lang
 
 	static public function setLanguage($l) {
 		self::$language = $l;
+		self::$lang = null;
 	}
 
 	static public function getLanguage() {
@@ -32,7 +34,11 @@ class Lang
     while(self::$lock) { sleep(1); }
     self::$lock = true;
 
-		$lang_file = "lang_" . self::$language . ".csv";
+		if(self::$language == "it") {
+			$lang_file = "lang_it.csv";
+		} else {
+			$lang_file = "lang_" . self::$language . ".csv";
+		}
 		
 		if(!file_exists($lang_file)) {
 			$lang_file = "lang_en.csv";
