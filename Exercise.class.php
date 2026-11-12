@@ -9,6 +9,8 @@ class Exercise {
 	private $solution;
 	private $verificationQuery;
 	private $verificationCount;
+	private $verificationQuery2;
+	private $verificationCount2;
 	public $answer;
 	public $description2;
 	public $speaker;
@@ -31,6 +33,8 @@ class Exercise {
 	public function getSolution() { return $this->solution; }
 	public function getVerificationQuery() { return $this->verificationQuery; }
 	public function getVerificationCount() { return $this->verificationCount; }
+	public function getVerificationQuery2() { return $this->verificationQuery2; }
+	public function getVerificationCount2() { return $this->verificationCount2; }
 	public function setDescription($s) { $this->description = $s; }
 	public function setHint($s) { $this->hint = $s; }
 	public function setSolved($b) { $this->solved = $b; }
@@ -38,6 +42,8 @@ class Exercise {
 	public function setSolution($s) { $this->solution = $s; }
 	public function setVerificationQuery($s) { $this->verificationQuery = $s; $this->updates = true; }
 	public function setVerificationCount($c) { $this->verificationCount = $c; }
+	public function setVerificationQuery2($s) { $this->verificationQuery2 = $s; }
+	public function setVerificationCount2($c) { $this->verificationCount2 = $c; }
 
 	public function printExercise($player_name = null, $exercise_id = null) {
 		$description = $this->description;

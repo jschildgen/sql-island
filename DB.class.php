@@ -190,7 +190,7 @@ public function isCorrect($exercise, $query) {
     return "";
   }
 
-	if($_SESSION['sandbox'] === true) {		// Sandbox mode
+	if(isset($_SESSION['sandbox']) && $_SESSION['sandbox'] === true) {		// Sandbox mode
 		return "sandbox";
 	}
 
@@ -241,13 +241,31 @@ public function isCorrect($exercise, $query) {
 			return $error_msg;
 		}
         }
-	elseif($exercise->getVerificationQuery() != "") {
+	elseif($exercise->getVerificationQuery() != null && $exercise->getVerificationQuery() != "") {
 		$result = $this->db->query($exercise->getVerificationQuery());
 		if($result) {
 			$rows = $result->fetchAll();
 			$n = count($rows);
-			if($n == $exercise->getVerificationCount()) {
-				return "";
+			if($n == $exercise->getVerificationCount()) { // correct number of rows
+				if($exercise->getVerificationQuery2() == null || $exercise->getVerificationQuery2() == "") {
+					return "";
+				} else { // second verfication query
+					$result = $this->db->query($exercise->getVerificationQuery2());
+					if($result) {
+						$rows = $result->fetchAll();
+						$n = count($rows);
+						if($n == $exercise->getVerificationCount2()) {
+							return "";
+						} else {
+							return Lang::txt("Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.");
+						}
+					} else {
+						$error = $this->db->errorInfo();
+									$error_msg = $error[2];
+									return $error_msg;
+
+					}
+				}
 			} else {
 				return Lang::txt("Oh oh... Entweder du hast zu viele oder zu wenige Änderungen durchgeführt.");
 			}
@@ -255,7 +273,6 @@ public function isCorrect($exercise, $query) {
 			$error = $this->db->errorInfo();
                         $error_msg = $error[2];
                         return $error_msg;
-
 		}
 	}
 

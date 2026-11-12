@@ -122,6 +122,8 @@ class Game {
 		$e[14]->setSolution("UPDATE ".Lang::txt("gegenstand")." SET ".Lang::txt("besitzer")." = 15 WHERE ".Lang::txt("gegenstand")." = '".Lang::txt("Teekanne")."' OR ".Lang::txt("gegenstand")." = '".Lang::txt("Ring")."'");
 		$e[14]->setVerificationQuery("SELECT * FROM ".Lang::txt("gegenstand")." WHERE ".Lang::txt("besitzer")." = 15 AND (".Lang::txt("gegenstand")." = '".Lang::txt("Teekanne")."' OR ".Lang::txt("gegenstand")." = '".Lang::txt("Ring")."')");
 		$e[14]->setVerificationCount(2);
+		$e[14]->setVerificationQuery2("SELECT * FROM ".Lang::txt("gegenstand")." WHERE ".Lang::txt("besitzer")." = 15 AND ".Lang::txt("gegenstand")." != '".Lang::txt("Teekanne")."' and ".Lang::txt("gegenstand")." != '".Lang::txt("Ring")."'");
+		$e[14]->setVerificationCount2(0);
 		$e[14]->answer = Lang::txt("Dankeschön!");
 		$e[14]->leftimg = "avatar";
 		$e[14]->rightimg = "helga";
@@ -138,6 +140,8 @@ class Game {
 		$e[16]->setSolution("UPDATE ".Lang::txt("bewohner")." SET ".Lang::txt("name")." = 'Peter' WHERE ".Lang::txt("bewohnernr")." = 20");
 		$e[16]->setVerificationQuery("SELECT * FROM ".Lang::txt("bewohner")." WHERE ".Lang::txt("name")." = '".Lang::txt("Fremder")."'");
 		$e[16]->setVerificationCount(0);
+		$e[16]->setVerificationQuery2("SELECT ".Lang::txt("name")." FROM ".Lang::txt("bewohner")." GROUP BY ".Lang::txt("name")." HAVING count(*)>1");
+		$e[16]->setVerificationCount2(0);
 		$e[16]->leftimg = "avatar_wuetend";
 		$e[16]->rightimg = "";
 		$e[16]->speaker = "L";
